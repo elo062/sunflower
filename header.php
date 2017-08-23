@@ -13,12 +13,14 @@
 <nav>
 <div id="op-horizontalnav">
 <ul class="op-sectionlist">
-<li class="op-v-item"><a class="op-v-link" href="#mysect1">MENU ITEM 1</a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php">Accueil</a></li>
+<li class="op-v-item"><a class="op-v-link" href="#mysect1">Présentation</a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect2">MENU ITEM 2</a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect3">MENU ITEM 3</a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect4">MENU ITEM 4</a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect5">MENU ITEM 5</a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect6">MENU ITEM 6</a></li>
+<li class="op-v-item"><a class="op-v-link" href="boutique.php">Boutique</a></a></li>
 </ul>
 </div>
 </nav>

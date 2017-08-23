@@ -1,60 +1,28 @@
+<!-- Page qui affiche tous les albums -->
 <?php
-require_once ("header.php");
+// On se connecte à la bdd
+require_once("./config/connexion.php");
+require_once("header.php");
+$reponse = $bdd->query('SELECT * FROM boutique ORDER BY boutique.id DESC ');
+$albums = $reponse;
+ ?>
+
+ <div class="texte">
+   <p><a href="addProduit.php">Ajouter un album</a></p>
+ <h1>Albums disponibles :</h1>
+	</div>
+
+
+ <?php
+ foreach($albums as $album)
+ {
+ 				echo "<p class='album'>Album : " . $album['nom'] . " </p>";
+ 				echo "<p class='album'>Prix : " . $album['prix'] . " € </p>";
+				echo "<p class='album'><Image : " . $album['image'] . " </p>";
+				echo "<p class='album'><img src='./assets/img/" . $album['image'] . "' </p><br />";
+        echo "<a href='modifProduit.php?idAlbum=" . $album['id'] . "'><input type='submit' value='Modifier' class='button' name='idAlbum'></a>";
+ 				echo "<a href='suppProduit.php?idAlbum=" . $album['id'] . "'><input type='submit' value='Supprimer' class='button' name='idAlbum'></a><br /><br />";
+ }
+
+require_once("footer.php");
 ?>
-
-<body>
-  <div class="content">
-    <div class="middle inline">
-      <form method="post" action="redirect.php" class="form">
-        <?php
-        $pseudo = false;
-        $mdp = false;
-         ?>
-        <label>Nom d'utilisateur</label><br />
-        <input type="text" name="pseudo" required />
-        <br />
-        <label>Mot de passe</label><br />
-        <input type="password" name="mdp" required />
-        <br /><br />
-        <input type="submit" value="Se connecter">
-      </form>
-    </div>
-  </div>
-<script type="text/javascript">
-(function (global) {
-
-    if(typeof (global) === "undefined") {
-        throw new Error("window is undefined");
-    }
-
-    var _hash = "!";
-    var noBackPlease = function () {
-        global.location.href += "#";
-
-        // making sure we have the fruit available for juice (^__^)
-        global.setTimeout(function () {
-            global.location.href += "!";
-        }, 50);
-    };
-
-    global.onhashchange = function () {
-        if (global.location.hash !== _hash) {
-            global.location.hash = _hash;
-        }
-    };
-
-    global.onload = function () {
-        noBackPlease();
-
-        // disables backspace on page except on input fields and textarea..
-        document.body.onkeydown = function (e) {
-            var elm = e.target.nodeName.toLowerCase();
-            if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
-                e.preventDefault();
-            }
-            // stopping event bubbling up the DOM tree..
-            e.stopPropagation();
-        };
-    }
-</script>
-<?php require_once ("footer.php"); ?>

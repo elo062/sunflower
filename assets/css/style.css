@@ -75,5 +75,73 @@ table {
 #op-verticalnav .op-v-link:hover .op-v-itemdesc {right:0px; }
 
 /*== Sections ==*/
-section h1 {padding:450px; text-align:center; color:white; background:#333; border-top:1px solid red; margin:0}
+section h1 {padding:450px; text-align:center; color:white; border-top:1px solid red; margin:0}
 section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 section sur 2*/
+#mysect1{
+	background-image: url('../img/guitar.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+/* Footer */
+
+footer{
+	height: 120px;
+	font-family: "corps";
+	font-weight: bold;
+	color: white;
+	font-size: 1em;
+	background-color: rgba(0, 0, 0, 0.9);
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+}
+
+footer p, footer ul
+{
+    font-size: 0.8em;
+}
+
+footer h1
+{
+  font-size: 1.2em;
+	color: rgb(50,97,123);
+}
+
+#infos a{
+	text-decoration: none;
+	color: yellow;
+}
+
+#infos p{
+	color: white;
+}
+
+#mes_photos img
+{
+    border: 1px solid #181818;
+    margin-right: 2px;
+}
+
+#rs ul
+{
+  list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+	margin-top: 11px;
+}
+
+#rs a
+{
+    text-decoration: none;
+    color: #760001;
+}
+
+.fa{
+	color: rgb(232,234,236);
+}

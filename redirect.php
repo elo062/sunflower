@@ -4,7 +4,7 @@ $nvPseudo = $_POST['pseudo'];
 $_SESSION['pseudo'] = $nvPseudo;
 $nvmdp = $_POST['mdp'];
 $_SESSION['mdp'] = $nvmdp;
-header("Location: index.php");
+header("Location: backoffice.php");
 
 require_once ("header.php");
 ?>

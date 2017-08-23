@@ -3,7 +3,7 @@
 <!-- Wrapper sections -->
 <div class="content">
 <section id="mysect1">
-<h1>SECTION 1</h1>
+<h1>Présentation</h1>
 </section>
 <section id="mysect2">
 <h1>SECTION 2</h1>

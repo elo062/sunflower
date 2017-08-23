@@ -13,14 +13,14 @@ $albums = $reponse;
 
 
  <?php
- foreach($albumss as $albums)
+ foreach($albums as $album)
  {
- 				echo "<p class='album'>Album : " . $albums['nom'] . " </p>";
- 				echo "<p class='album'>Prix : " . $albums['prix'] . " € </p>";
-				echo "<p class='album'><Image : " . $albums['image'] . " </p>";
-				echo "<p class='album'><img src='./assets/img/" . $albums['image'] . "' </p><br />";
-        echo "<a href='updatePlat.php?idAlbum=" . $albums['ID'] . "'><input type='submit' value='Modifier' class='button' name='idAlbum'></a>";
- 				echo "<a href='supprimerPlat.php?idAlbum=" . $albums['ID'] . "'><input type='submit' value='Supprimer' class='button' name='idAlbum'></a><br /><br />";
+ 				echo "<p class='album'>Album : " . $album['nom'] . " </p>";
+ 				echo "<p class='album'>Prix : " . $album['prix'] . " € </p>";
+				echo "<p class='album'><Image : " . $album['image'] . " </p>";
+				echo "<p class='album'><img src='./assets/img/" . $album['image'] . "' </p><br />";
+        echo "<a href='modifProduit.php?idAlbum=" . $album['id'] . "'><input type='submit' value='Modifier' class='button' name='idAlbum'></a>";
+ 				echo "<a href='suppProduit.php?idAlbum=" . $album['id'] . "'><input type='submit' value='Supprimer' class='button' name='idAlbum'></a><br /><br />";
  }
 
 require_once("footer.php");
