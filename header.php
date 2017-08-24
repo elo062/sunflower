@@ -7,13 +7,14 @@
   <title>Sunflower</title>
   <link rel="icon" href="./assets/img/sunflower-logo.ico">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
 </head>
 
 <!-- Start horizontal navigation -->
 <nav>
 <div id="op-horizontalnav">
 <ul class="op-sectionlist">
-<li class="op-v-item"><a class="op-v-link" href="index.php">Accueil</a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php"><img src="assets/img/sunflower-logo.ico"></a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect1">Présentation</a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect2">MENU ITEM 2</a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect3">MENU ITEM 3</a></li>

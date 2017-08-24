@@ -49,34 +49,116 @@ table {
 
 @font-face
 {
-  font-family: "IndieFlower" ;
-  src: url("IndieFlower.ttf");
+  font-family: "Baloo Bhaijaan", cursive;
+	src: url("BalooBhaijaan-Regular.ttf");
 }
 
 
 /*== Menu horizontal ==*/
-#op-horizontalnav {background:#171717; position:fixed; top:0; right:0; left:0}
-#op-horizontalnav .op-sectionlist {width:100%; max-width:1280px; margin:auto;padding:0; text-align:center; display:table;}
-#op-horizontalnav .op-v-item {list-style:none; display:table-cell; font-size:16px}
-#op-horizontalnav .op-v-item .op-v-link {color:#fff; padding:16px 8px;display:block;text-decoration:none}
-#op-horizontalnav .op-v-item .op-v-link:hover, #op-horizontalnav .op-v-link.active {background-color:#fff;color:#171717}
+#op-horizontalnav {
+	background:#171717;
+	position:fixed;
+	top:0;
+	right:0;
+	left:0
+}
+#op-horizontalnav .op-sectionlist {
+	width:100%;
+	max-width:1280px;
+	margin:auto;
+	padding:0;
+	text-align:center;
+	display:table;
+}
+#op-horizontalnav .op-v-item {
+	list-style:none;
+	display:table-cell;
+	font-size:16px
+}
+#op-horizontalnav .op-v-item .op-v-link {
+	color:#fff;
+	padding:16px 8px;
+	display:block;
+	text-decoration:none;
+}
+#op-horizontalnav .op-v-item .op-v-link:hover, #op-horizontalnav .op-v-link.active {
+	background-color:#fff;
+	color:#171717
+}
 
 
 /*== Menu vertical ==*/
-#op-verticalnav {position:fixed; top:0; right:0; left: auto;height: 100%;display:table}
-#op-verticalnav .op-sectionlist {height:100%; text-align:center; display:table-cell; vertical-align:middle}
-#op-verticalnav .op-v-item {display:block}
+#op-verticalnav {
+	position:fixed;
+	top:0;
+	right:0;
+	left: auto;
+	height: 100%;
+	display:table
+}
+#op-verticalnav .op-sectionlist {
+	height:100%;
+	text-align:center;
+	display:table-cell;
+	vertical-align:middle
+}
+#op-verticalnav .op-v-item {
+	display:block
+}
 #op-verticalnav .justify-height {}
-#op-verticalnav .op-v-link {display:block; margin:12px 0}
-#op-verticalnav .v-marker {width:15px; height:15px; border-radius:50%; background-color:rgba(255,0,27,.4); display:inline-block; vertical-align:middle; margin-bottom:-2px; margin-right:10px;border: 1px solid #e1001b;}
-#op-verticalnav .op-v-link:hover .v-marker, #op-verticalnav .op-v-item .op-v-link.active .v-marker {background-color:rgba(255,0,27,1); }
-#op-verticalnav .op-v-itemdesc {display:inline-block; font-size:14px; position:absolute; white-space:nowrap; line-height:normal; padding:0 34px 0 0;vertical-align:middle}
-#op-verticalnav .op-v-itemdesc .op-v-itembg{display:inline-block; background-color:rgba(0,0,0,.5); color:#fff; padding:4px 10px 6px 10px; border:1px solid rgba(160,160,160,.2); border-radius:4px; }
-#op-verticalnav .op-v-link:hover .op-v-itemdesc {right:0px; }
+#op-verticalnav .op-v-link {
+	display:block;
+	margin:12px 0
+}
+#op-verticalnav .v-marker {
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	background-color:rgba(255,0,27,.4);
+	display:inline-block;
+	vertical-align:middle;
+	margin-bottom:-2px;
+	margin-right:10px;
+	border: 1px solid #e1001b;
+}
+#op-verticalnav .op-v-link:hover .v-marker, #op-verticalnav .op-v-item .op-v-link.active .v-marker {
+	background-color:rgba(255,0,27,1);
+}
+#op-verticalnav .op-v-itemdesc {
+	display:inline-block;
+	font-size:14px;
+	position:absolute;
+	white-space:nowrap;
+	line-height:normal;
+	padding:0 34px 0 0;
+	vertical-align:middle
+}
+#op-verticalnav .op-v-itemdesc .op-v-itembg{
+	display:inline-block;
+	background-color:rgba(0,0,0,.5);
+	color:#fff;
+	padding:4px 10px 6px 10px;
+	border:1px solid rgba(160,160,160,.2);
+	border-radius:4px;
+}
+#op-verticalnav .op-v-link:hover .op-v-itemdesc {
+	right:0px;
+}
 
 /*== Sections ==*/
-section h1 {padding:450px; text-align:center; color:white; border-top:1px solid red; margin:0}
-section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 section sur 2*/
+section h1 {
+	padding:450px;
+	text-align:center;
+	color:white;
+	border-top:1px solid red;
+	margin:0;
+}
+section:nth-child(even) h1 {
+	background:#222;
+	}
+
+	/*on différencie la couleur 1 section sur 2*/
+
 #mysect1{
 	background-image: url('../img/guitar.jpg');
 	background-repeat:no-repeat;
@@ -89,7 +171,7 @@ section:nth-child(even) h1 {background:#222;} /*on différencie la couleur 1 sec
 
 footer{
 	height: 120px;
-	font-family: "corps";
+	font-family: "Baloo Bhaijaan", cursive;
 	font-weight: bold;
 	color: white;
 	font-size: 1em;
@@ -110,12 +192,12 @@ footer p, footer ul
 footer h1
 {
   font-size: 1.2em;
-	color: rgb(50,97,123);
+	color: #ff8100;
 }
 
 #infos a{
 	text-decoration: none;
-	color: yellow;
+	color: #ffbf00;
 }
 
 #infos p{
