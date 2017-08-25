@@ -3,7 +3,7 @@
             <h1>Informations</h1>
               <p><a href="contact.php">Contact</a></p>
               <p><a href="boutique.php">Boutique</a></p>
-              <p><a href="connexionBackoffice.php">Back-office</a></p>
+              <p><a href="backoffice.php">Back-office</a></p>
         </div>
         <div id="infos">
           <h1>Autres</h1>

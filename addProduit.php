@@ -1,7 +1,7 @@
 <!-- formulaire permettant de choisir un plat -->
 <?php require_once ("header.php"); ?>
 
-<div class="album">
+<div class="texte">
   <form method="post" action="traitementAddProduit.php" enctype="multipart/form-data">
      <p>
        <label for="nom">Entrez le nom de l'album :</label>

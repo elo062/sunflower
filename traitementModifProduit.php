@@ -54,5 +54,5 @@ else {
 }
 
 // Redirection vers la page boutique.php
-header('Location:boutique.php');
+header('Location:backoffice.php');
 ?>

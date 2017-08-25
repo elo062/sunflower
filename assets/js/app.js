@@ -11,7 +11,7 @@ $(function() {
   };
   $("a").click(function( event ) { // on attache la fonction au click
     if ( $(this).attr("href").match("#") ) { // on vérifie qu'il s'agit d'une ancre
-      event.preventDefault();
+      // event.preventDefault();
       var href = $(this).attr('href').replace('#', '') // on scroll vers la cible
       scrollToAnchor( href ); }
   });

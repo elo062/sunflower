@@ -39,5 +39,5 @@ $req->execute(array(
   'image' => $image
 	));
 
-header('Location:boutique.php');
+header('Location:backoffice.php');
 ?>

@@ -1,6 +1,6 @@
 <?php
 // Pour les headers et footers il vaut mieux un require_once pour ne pas recharger la requête à chaque fois. Le require_once garde la requête en mémoire => si on utilise plusieurs fois cette requête il vaut mieux la garder en mémoire pour ne la charger qu'une fois.
-require_once("header.php");
+require_once("header2.php");
 require_once("./config/connexion.php");
 
 
@@ -18,7 +18,7 @@ $requete->execute();
 while ($donnees = $requete->fetch())
 {
   // formulaire permettant de modifier un album
-  echo "<div class='album'>
+  echo "<div class='texte'>
     <form method='post' action='traitementModifProduit.php?idAlbum=".$idAlbum."' enctype='multipart/form-data'>
       <p>
         <label for='nom'>Modifiez le nom de votre album :</label>
@@ -36,5 +36,4 @@ while ($donnees = $requete->fetch())
   </div>";
 }
 
-require_once ("footer.php");
 ?>

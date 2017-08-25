@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	/*padding-bottom: 230px;*/
 }
 
 blockquote, q {
@@ -50,7 +51,6 @@ table {
 @font-face
 {
   font-family: "Baloo Bhaijaan", cursive;
-	src: url("BalooBhaijaan-Regular.ttf");
 }
 
 
@@ -114,7 +114,7 @@ table {
 	width:15px;
 	height:15px;
 	border-radius:50%;
-	background-color:rgba(255,0,27,.4);
+	background-color:#ffbf00;
 	display:inline-block;
 	vertical-align:middle;
 	margin-bottom:-2px;
@@ -122,7 +122,7 @@ table {
 	border: 1px solid #e1001b;
 }
 #op-verticalnav .op-v-link:hover .v-marker, #op-verticalnav .op-v-item .op-v-link.active .v-marker {
-	background-color:rgba(255,0,27,1);
+	background-color: #ff8100;
 }
 #op-verticalnav .op-v-itemdesc {
 	display:inline-block;
@@ -153,24 +153,94 @@ section h1 {
 	border-top:1px solid red;
 	margin:0;
 }
-section:nth-child(even) h1 {
+/*section:nth-child(even) h1 {
 	background:#222;
-	}
+	}*/
 
 	/*on différencie la couleur 1 section sur 2*/
 
 #mysect1{
-	background-image: url('../img/guitar.jpg');
+	background-image: url('../img/festival.jpg');
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center center;
 }
 
+#mysect2{
+	background-image: url('../img/music.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+#mysect3{
+	background-image: url('../img/guitar6.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+#mysect4{
+	background-image: url('../img/guitar3.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+#mysect5{
+	background-image: url('../img/guitar4.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+#mysect6{
+	background-image: url('../img/guitar5.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+}
+
+/* Boutique */
+
+.boutique{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.album{
+	display: flex;
+	flex-direction: column;
+}
+
+.texte {
+	margin-top: 10%;
+	text-decoration: none;
+	text-align: center;
+}
+
+img{
+	max-width: 350px;
+}
+
 /* Footer */
 
 footer{
-	height: 120px;
+	height: 230px;
+	background-image: url('../img/guitar9.jpg');
+	background-repeat:no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
 	font-family: "Baloo Bhaijaan", cursive;
 	font-weight: bold;
 	color: white;
@@ -181,7 +251,7 @@ footer{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	position: fixed;
+	flex-direction: column;
 }
 
 footer p, footer ul
@@ -195,6 +265,10 @@ footer h1
 	color: #ff8100;
 }
 
+#infos{
+	display: flex;
+}
+
 #infos a{
 	text-decoration: none;
 	color: #ffbf00;
@@ -204,11 +278,6 @@ footer h1
 	color: white;
 }
 
-#mes_photos img
-{
-    border: 1px solid #181818;
-    margin-right: 2px;
-}
 
 #rs ul
 {

@@ -3,8 +3,7 @@ require_once ("header.php");
 ?>
 
 <body>
-  <div class="content">
-    <div class="middle inline">
+  <div class="texte">
       <form method="post" action="redirect.php" class="form">
         <?php
         $pseudo = false;
@@ -18,7 +17,6 @@ require_once ("header.php");
         <br /><br />
         <input type="submit" value="Se connecter">
       </form>
-    </div>
   </div>
 <script type="text/javascript">
 (function (global) {
