@@ -243,11 +243,8 @@ footer{
 	background-position: center center;
 	font-family: "Baloo Bhaijaan", cursive;
 	font-weight: bold;
-	color: white;
 	font-size: 1em;
-	background-color: rgba(0, 0, 0, 0.9);
 	bottom: 0;
-	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -278,6 +275,9 @@ footer h1
 	color: white;
 }
 
+#rs{
+	width: 200px;
+}
 
 #rs ul
 {
@@ -294,5 +294,5 @@ footer h1
 }
 
 .fa{
-	color: rgb(232,234,236);
+	color: black;
 }

@@ -7,6 +7,7 @@
   <title>Sunflower</title>
   <link rel="icon" href="./assets/img/sunflower-logo.ico">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/icone/css/font-awesome.css"/>
   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
 </head>
 
