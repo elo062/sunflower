@@ -1,0 +1,40 @@
+<!-- formulaire permettant de s'enregistrer -->
+<?php require_once ("header2.php"); ?>
+
+<!--Nom (type : text) , Email(type : email), Tél ( type : tel )-->
+<div class="texte">
+    <form action="traitementCreerCompte.php" method="post" enctype="multipart/form-data">
+        <h1>Créer un compte</h1>
+            <p>Vous en avez déjà un ?<a href="login.php">Connectez-vous</a></p>
+            <p><label for="nom"><strong>Nom :<strong></label>
+               <input type="text" name="nom" maxlength="40" />
+             </p>
+            <p><label for="prenom"><strong>Prénom :<strong></label>
+               <input type="text" name="prenom" maxlength="40"/>
+             </p>
+             <p><label for="adresse"><strong>Adresse :<strong></label>
+                <input type="text" name="adresse" maxlength="255"/>
+              </p>
+             <p><label for="tel"><strong>Téléphone :<strong></label>
+                <input type="tel" name="tel" maxlength="10"/>
+            </p>
+             <p><label for="email"><strong>Adresse mail :<strong></label>
+               <input type="email" name="email" maxlength="40"/>
+             </p>
+             <p><label for="username"><strong>Pseudo<strong></label>
+                <input type="text" name="username" maxlength="40"/>
+              </p>
+            <p><label for="password"><strong>Mot de passe<strong></label>
+               <input type="password" name="password" maxlength="14"/></p>
+
+            <p><label for="password"><strong>Vérification du mot de passe<strong></label>
+               <input type="password" name="password" maxlength="14"/></p>
+
+            <p><input type="checkbox" name="showpsd" class="showpsd"/><label for="showpsd" id="showpsd">Montrer le mot de passe</label></p>
+
+            <p><input type="submit" name="envoyer" value="Envoyer" class="button"></p>
+
+      </form>
+  </div>
+
+<?php require_once ("footer.php"); ?>

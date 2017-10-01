@@ -22,7 +22,8 @@
 <li class="op-v-item"><a class="op-v-link" href="index.php#mysect4">MENU ITEM 4</a></li>
 <li class="op-v-item"><a class="op-v-link" href="index.php#mysect5">MENU ITEM 5</a></li>
 <li class="op-v-item"><a class="op-v-link" href="index.php#mysect6">MENU ITEM 6</a></li>
-<li class="op-v-item"><a class="op-v-link" href="boutique.php">Boutique</a></a></li>
+<li class="op-v-item"><a class="op-v-link" href="enregistrement.php">Réservation</a></li>
+<!-- <li class="op-v-item"><a class="op-v-link" href="boutique.php">Boutique</a></a></li> -->
 </ul>
 </div>
 </nav>
