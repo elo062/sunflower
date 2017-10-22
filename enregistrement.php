@@ -11,7 +11,8 @@ if (empty($_SESSION['id']))
 <div class="texte">
     <form action="traitementCreerCompte.php" method="post" enctype="multipart/form-data">
         <h1>Créer un compte</h1>
-            <p>Vous en avez déjà un ?<a href="login.php">Connectez-vous</a></p>
+            <p class="espace">Vous en avez déjà un ? <a href="login.php"> Connectez-vous</a></p>
+            <div class="formulaire">
             <p><label for="nom"><strong>Nom :<strong></label>
                <input type="text" name="nom" maxlength="40" />
              </p>
@@ -27,11 +28,12 @@ if (empty($_SESSION['id']))
              <p><label for="email"><strong>Adresse mail :<strong></label>
                <input type="email" name="email" maxlength="40"/>
              </p>
-            <p><label for="password"><strong>Mot de passe<strong></label>
+            <p><label for="password"><strong>Mot de passe :<strong></label>
                <input type="password" name="password" id="password" maxlength="14"/></p>
 
-            <p><label for="password"><strong>Vérification du mot de passe<strong></label>
+            <p><label for="password"><strong>Vérification du mot de passe :<strong></label>
                <input type="password" name="password" maxlength="14" id="vpassword"/></p>
+             </div>
 
             <p><input type="checkbox" name="showpsd" class="showpsd"/><label for="showpsd">Montrer le mot de passe</label></p>
 

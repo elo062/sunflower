@@ -27,7 +27,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	/*padding-bottom: 230px;*/
+	font-family: 'Comfortaa', cursive;
 }
 
 blockquote, q {
@@ -50,7 +50,8 @@ table {
 
 @font-face
 {
-  font-family: "Baloo Bhaijaan", cursive;
+	font-family: 'Poiret One', cursive;
+	font-family: 'Comfortaa', cursive;
 }
 
 
@@ -69,11 +70,12 @@ table {
 	padding:0;
 	text-align:center;
 	display:table;
+	font-family: 'Comfortaa', cursive;
 }
 #op-horizontalnav .op-v-item {
 	list-style:none;
 	display:table-cell;
-	font-size:16px
+	font-size:18px;
 }
 #op-horizontalnav .op-v-item .op-v-link {
 	color:#fff;
@@ -145,6 +147,7 @@ table {
 	right:0px;
 }
 
+
 /*== Sections ==*/
 section h1 {
 	padding:450px;
@@ -160,7 +163,7 @@ section h1 {
 	/*on différencie la couleur 1 section sur 2*/
 
 #mysect1{
-	background-image: url('../img/festival.jpg');
+	background-image: url('https://j.gifs.com/vo26nm.gif');
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -223,27 +226,72 @@ section h1 {
 }
 
 .texte {
-	margin-top: 10%;
+	margin: 8%;
 	text-decoration: none;
-	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 img{
 	max-width: 350px;
 }
 
+/*Formulaire d'inscription*/
+
+
+form h1{
+	font-size: 38px;
+	font-weight: bold;
+	margin: 3%;
+	text-align: center;
+	font-family: 'Poiret One', cursive;
+}
+
+
+.formulaire p{
+	margin: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	width: 500px;
+}
+
+.espace{
+	margin: 12% 0%;
+}
+.espace a{
+	text-decoration: none;
+	color: #ffbf00;
+	font-weight: bold;
+}
+
+.button{
+	margin: 12% 0% 3% 0%;
+	padding: 5px;
+	border-radius: 5px;
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+	font-size: 1.3em;
+	background-color: #ffbf00;
+}
+
+
+.button:hover{
+	background-color: white;
+	color: black;
+	border: 3px solid #ffbf00;
+}
+
+
 /* Footer */
 
 footer{
-	height: 230px;
+	height: 180px;
 	background-image: url('../img/guitar9.jpg');
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center center;
-	font-family: "Baloo Bhaijaan", cursive;
-	font-weight: bold;
-	font-size: 1em;
+	font-family: 'Poiret One', cursive;
 	bottom: 0;
 	display: flex;
 	justify-content: space-around;
@@ -251,48 +299,74 @@ footer{
 	flex-direction: column;
 }
 
-footer p, footer ul
-{
-    font-size: 0.8em;
-}
-
-footer h1
-{
-  font-size: 1.2em;
-	color: #ff8100;
-}
-
-#infos{
+.footer{
 	display: flex;
+	justify-content: space-around;
+	width: 450px;
+	font-size: 1.4em;
+	font-weight: bolder;
 }
 
-#infos a{
+.footer a {
 	text-decoration: none;
+	color: black;
+}
+
+.footer a:hover{
 	color: #ffbf00;
+	text-shadow:  1px 1px black;
 }
 
-#infos p{
-	color: white;
-}
-
-#rs{
-	width: 200px;
-}
-
-#rs ul
+.rs ul
 {
   list-style-type: none;
 	display: flex;
 	justify-content: space-around;
-	margin-top: 11px;
+	width: 200px;
 }
 
-#rs a
-{
+.rs a{
     text-decoration: none;
-    color: #760001;
+    color: black;
+}
+.rs a:hover{
+	color: #ffbf00;
+	text-shadow:  1px 1px black;
 }
 
-.fa{
-	color: black;
+/*Responsive tablette*/
+@media screen and (max-width: 800){
+    .footer{
+				max-width: 80%;
+        font-size: 1.3em;
+    }
+}
+
+/*Responsive smartphone*/
+@media screen and (max-width: 480px){
+	.texte{
+		margin-top: 30%;
+	}
+	.texte h1{
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+	form{
+		max-width: 100%;
+	}
+	.formulaire p{
+		max-width: 100%;
+		font-size: 1.1em;
+		margin: 3% 0%;
+	}
+	footer{
+		height: 150px;
+	}
+	.footer{
+		max-width: 80%;
+		font-size: 1.1em;
+	}
+	.rs {
+		font-size: 0.8em;
+	}
 }

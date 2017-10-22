@@ -19,15 +19,15 @@ $users = $reponse;
 foreach($users as $user)
 {
 				// echo "<p class='texte'>id : " . $user['ID'] . " </p>";
-				echo "<div class='separation'><p class='texte'>Utilisateur : " . $user['username'] . " </p>";
+				echo "<div class='separation'><p class='texte'>Utilisateur : " . $user['prenom'] . " </p>";
 
-				// On fait une jointure à gauche entre l'ID des plats de la table "plats" et l'id_menus de la table "relation_menus_plats"
-				$resasUser = $bdd->query('SELECT *  FROM `relation_user_resa` LEFT JOIN reservation ON `relation_user_resa`.id_resa = resa.id WHERE `id_user` ="'.$user['id'] . '"');
+				// On fait une jointure à gauche entre l'ID des réservations de la table "reservation" et l'id_user de la table "relation_user_resa"
+				$resasUser = $bdd->query('SELECT *  FROM `relation_user_resa` LEFT JOIN reservation ON `relation_user_resa`.id_resa = reservation.id WHERE `id_user` ="'.$user['id'] . '"');
 				$resas = $resasUser;
 				// En-dessous de chaque utilisateur on affiche ses réservations
 				foreach($resas as $resa)
 				{
-	 				echo "<p class='texte'>Date" . $user['date'] . " : <br />" . $resa['nom'] . " </p>";
+	 				echo "<p class='texte'>Date" . $user['dateResa'] . " : <br />" . $resa['nom'] . " </p>";
 	 				echo "<p class='texte'>Lieu : " . $resa['lieu'] . "</p><br />";
           echo "<p class='texte'>Durée : " . $resa['duree'] . " heure(s) </p><br />";
           echo "<p class='texte'>Vous pouvez modifier ou annuler une réservation jusqu'à 3 mois avant l'événement. Autrement des pénalités vous seront imposées.<br />";

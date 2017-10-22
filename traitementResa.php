@@ -2,7 +2,7 @@
 // On se connecte à la bdd
 require_once("./config/connexion.php");
 
-// On déclare les variables name
+// Je mets la date au bon format
 $date = DateTime::createFromFormat('d/m/Y', $_POST['dateResa']);
 $date = $date->format('Y-m-d');
 
