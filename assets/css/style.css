@@ -69,7 +69,8 @@ table {
 	margin:auto;
 	padding:0;
 	text-align:center;
-	display:table;
+	display: flex;
+	justify-content: space-around;
 	font-family: 'Comfortaa', cursive;
 }
 #op-horizontalnav .op-v-item {
