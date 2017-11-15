@@ -13,10 +13,11 @@
 </head>
 
 <!-- Start horizontal navigation -->
+
 <nav>
   <div id="op-horizontalnav">
     <ul class="op-sectionlist">
-      <li class="op-v-item"><a class="op-v-link" href="index.php"><img src="assets/img/sunflower-logo1.png" alt="logo sunflower" title="Accueil"></a></li>
+      <li class="op-v-item"><a class="op-v-link" href="index.php"><img src="assets/img/sunflower-logo1.png" alt="logo sunflower" title="Accueil" class="icone"></a></li>
       <li class="op-v-item"><a class="op-v-link" href="#mysect1">Présentation</a></li>
       <li class="op-v-item"><a class="op-v-link" href="#mysect2">MENU ITEM 2</a></li>
       <li class="op-v-item"><a class="op-v-link" href="#mysect3">MENU ITEM 3</a></li>
@@ -29,6 +30,7 @@
   </div>
 </nav>
 <!-- end horizontal navigation -->
+<div class="menuSandwich">Menu</div>
 
 
 <!-- Start vertical navigation -->

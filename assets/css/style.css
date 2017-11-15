@@ -54,7 +54,6 @@ table {
 	font-family: 'Comfortaa', cursive;
 }
 
-
 /*== Menu horizontal ==*/
 #op-horizontalnav {
 	background:#171717;
@@ -105,6 +104,7 @@ table {
 	display:table-cell;
 	vertical-align:middle
 }
+
 #op-verticalnav .op-v-item {
 	display:block
 }
@@ -334,7 +334,12 @@ footer{
 	color: #ffbf00;
 	text-shadow:  1px 1px black;
 }
-
+.menuSandwich{
+	position: fixed;
+	z-index: 1000;
+	color: white;
+	width: 100px;
+}
 /*Responsive tablette*/
 @media screen and (max-width: 800){
     .footer{
@@ -345,6 +350,14 @@ footer{
 
 /*Responsive smartphone*/
 @media screen and (max-width: 480px){
+	.menuSandwich{
+		position: fixed;
+		z-index: 1000;
+		color: white;
+	}
+	#op-horizontalnav .op-sectionlist {
+		flex-direction: column;
+	}
 	.texte{
 		margin-top: 30%;
 	}
