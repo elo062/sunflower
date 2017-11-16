@@ -30,7 +30,7 @@
   </div>
 </nav>
 <!-- end horizontal navigation -->
-<div class="menuSandwich">Menu</div>
+<div class="menuSandwich"><img src="assets/img/menu-sandwich.png" alt="menu" title="menu"></div>
 
 
 <!-- Start vertical navigation -->

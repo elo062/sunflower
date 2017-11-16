@@ -1,6 +1,9 @@
 
 /* ====== Add Smooth effect ===== */
 $(function() {
+
+
+
   var scrollToAnchor = function( id ) {
     var elem = $("section[id='"+ id +"']"); // on crée une balise d'ancrage
     if ( typeof elem.offset()  === "undefined" ) { // on verifie si l'élément existe
@@ -14,7 +17,17 @@ $(function() {
       // event.preventDefault();
       var href = $(this).attr('href').replace('#', '') // on scroll vers la cible
       scrollToAnchor( href ); }
-      $(".op-sectionlist").hide();
+
+
+      var windowWidth= $(window).width();
+      if(windowWidth < 600){
+        $(".op-sectionlist").hide();
+        $(".menuSandwich").show();
+      }
+    if(windowWidth > 600){
+      $(".menuSandwich").hide();
+    }
+
   });
   $(".menuSandwich").click(function( event ) { // on attache la fonction au click
     $(".op-sectionlist").show();
