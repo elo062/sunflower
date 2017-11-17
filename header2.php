@@ -25,5 +25,6 @@
 <li class="op-v-item"><a class="op-v-link" href="enregistrement.php">Réservation</a></li>
 <!-- <li class="op-v-item"><a class="op-v-link" href="boutique.php">Boutique</a></a></li> -->
 </ul>
+<div class="menuSandwich"><img src="assets/img/menu-sandwich.png" alt="menu" title="menu"></div>
 </div>
 </nav>

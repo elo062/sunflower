@@ -2,6 +2,11 @@
 /* ====== Add Smooth effect ===== */
 $(function() {
 
+  var windowWidth= $(window).width();
+  if(windowWidth < 600) {
+    $(".op-sectionlist").hide();
+    $(".menuSandwich").show();
+  }
 
 
   var scrollToAnchor = function( id ) {

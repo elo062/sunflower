@@ -335,6 +335,7 @@ footer{
 	text-shadow:  1px 1px black;
 }
 .menuSandwich{
+	display: none;
 	position: fixed;
 	z-index: 1000;
 	width: 100px;

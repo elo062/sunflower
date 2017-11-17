@@ -5,7 +5,8 @@ if (empty($_SESSION['id']))
 {
 ?>
 <!-- formulaire permettant de s'enregistrer -->
-<?php require_once ("header.php"); ?>
+<?php require_once ("header2.php"); ?>
+
 
 <!--Nom (type : text) , Email(type : email), Tél ( type : tel )-->
 <div class="texte">
