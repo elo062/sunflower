@@ -22,16 +22,16 @@ while ($donnees = $requete->fetch())
     <form method='post' action='traitementUpdateResa.php?idResa=".$idResa."' enctype='multipart/form-data'>
       <p>
         <label for='date'>Modifiez la date de l'événement :</label>
-        <input type='date' name='date'  value='" . $donnees['date'] . "'/>
+        <input type='date' name='dateResa'  value='" . $donnees['dateResa'] . "'/>
         <br />
         <label for='lieu'>Modifiez le lieu de l'événement :</label>
-        <input type='text' name='lieu'  value='" . $donnees['date'] . "'/>
+        <input type='text' name='lieu'  value='" . $donnees['lieu'] . "'/>
         <br />
         <label for='duree'>Modifiez sa durée (exprimée en heures) :</label>
         <input type='number' name='duree' placeholder='Ex : 2' size='2' value='" . $donnees['duree'] . "'/>
         <br />
         <label for='message'>Modifiez le message :</label>
-        <input type='text' name='message'  value='" . $donnees['date'] . "'/>
+        <input type='text' name='message'  value='" . $donnees['message'] . "'/>
         <br />
       </p>
       <input type='submit' name='envoyer' value='Envoyer' class='button'>

@@ -2,23 +2,11 @@
 // On se connecte à la bdd
 require_once("./config/connexion.php");
 
-// Je mets la date au bon format
-$date = DateTime::createFromFormat('d/m/Y', $_POST['dateResa']);
-$date = $date->format('Y-m-d');
-
-
-$query = $bdd->prepare('INSERT INTO reservation(dateResa) VALUES(:dateResa)'); // $db étant une instance de PDO
-$query->bindValue(':dateResa', $date, PDO::PARAM_STR);
-$query->execute();
-
-
+$date = $_POST['dateResa'];
 $duree = $_POST['duree'];
 $lieu = $_POST['lieu'];
 $message = $_POST['message'];
-
-// Je veux modifier l'affichage de la date pour la mettre en français mais ça marche pas et de toute façon il enregistre 0000/00/00 en bdd !
-// $req = $bdd->prepare('SELECT DATE_FORMAT(dateResa, "%d/%m/%Y") AS dateResa FROM reservation');
-
+$id_user=$_POST['id_user'];
 
 // On insère la réservation en bdd
 $req = $bdd->prepare('INSERT INTO reservation(dateResa, duree, lieu, message) VALUES(:dateResa, :duree, :lieu, :message)');
@@ -27,6 +15,14 @@ $req->execute(array(
 	'duree' => $duree,
   'lieu' => $lieu,
   'message' => $message
+	));
+$id_resa=$bdd->lastInsertId();
+
+// On insère la réservation en bdd
+$req = $bdd->prepare('INSERT INTO relation_user_resa(id_user, id_resa) VALUES(:id_user, :id_resa)');
+$req->execute(array(
+	'id_user' => $id_user,
+  'id_resa' => $id_resa
 	));
 
 header('Location:finResa.php');

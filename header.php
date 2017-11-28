@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="assets/icone/css/font-awesome.css"/>
   <link href="https://fonts.googleapis.com/css?family=Comfortaa|Poiret+One" rel="stylesheet">
-
 </head>
 
 <!-- Start horizontal navigation -->

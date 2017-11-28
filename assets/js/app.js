@@ -1,14 +1,6 @@
 
 /* ====== Add Smooth effect ===== */
 $(function() {
-
-  var windowWidth= $(window).width();
-  if(windowWidth < 600) {
-    $(".op-sectionlist").hide();
-    $(".menuSandwich").show();
-  }
-
-
   var scrollToAnchor = function( id ) {
     var elem = $("section[id='"+ id +"']"); // on crée une balise d'ancrage
     if ( typeof elem.offset()  === "undefined" ) { // on verifie si l'élément existe
@@ -23,19 +15,21 @@ $(function() {
       var href = $(this).attr('href').replace('#', '') // on scroll vers la cible
       scrollToAnchor( href ); }
 
-
+// On fait apparaître le menu sandwich et disparaitre les boutons de navigation sur petit écran
       var windowWidth= $(window).width();
       if(windowWidth < 600){
         $(".op-sectionlist").hide();
+        $("#op-verticalnav").hide();
         $(".menuSandwich").show();
       }
+      // On fait disparaître le menu sandwich sur grand écran
     if(windowWidth > 600){
       $(".menuSandwich").hide();
     }
-
   });
+  // Au clic le menu sandwich se déroule doucement
   $(".menuSandwich").click(function( event ) { // on attache la fonction au click
-    $(".op-sectionlist").show();
+    $(".op-sectionlist").slideToggle('slow');
   });
 });
 

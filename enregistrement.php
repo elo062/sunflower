@@ -1,12 +1,11 @@
 <?php
  session_start();
+require_once ("header2.php");
+
 if (empty($_SESSION['id']))
 //les membres connecte ne peuvent pas s'inscrire
 {
 ?>
-<!-- formulaire permettant de s'enregistrer -->
-<?php require_once ("header2.php"); ?>
-
 
 <!--Nom (type : text) , Email(type : email), Tél ( type : tel )-->
 <div class="texte">

@@ -233,6 +233,11 @@ section h1 {
 	justify-content: center;
 }
 
+.texte h1{
+	font-size: 1.8em;
+	font-weight: bold;
+}
+
 img{
 	max-width: 350px;
 }
@@ -282,11 +287,33 @@ form h1{
 	border: 3px solid #ffbf00;
 }
 
+.false{
+	margin: 5% 0 0 20%;
+	color: red;
+	font-size: 18px;
+}
+
+/*Bouton haut*/
+
+.scrollToTop{
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  height: 40px;
+  width: auto;
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+}
 
 /* Footer */
 
 footer{
-	height: 180px;
+	height: 140px;
 	background-image: url('../img/guitar9.jpg');
 	background-repeat:no-repeat;
 	background-attachment: fixed;

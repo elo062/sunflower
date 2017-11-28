@@ -39,7 +39,6 @@ session_start();
                 'email'=>$email,
                 'password'=>$mdp
               ));
-
               echo "Merci de votre inscription";
               }
             else

@@ -1,4 +1,7 @@
-<?php require_once ("header2.php"); ?>
+<?php
+session_start();
+require_once ("header2.php");
+?>
 
 <div class="texte">
 
@@ -8,7 +11,7 @@
  ?>
 
   <form action="traitementResa.php" method="post" enctype="multipart/form-data"> <!-- On prévient le serveur qu'on va envoyer des infos -->
-
+            <input type="hidden" name="id_user" value="<?php echo $_SESSION['id']; ?>" />
             <p><label for="date">Date de l'événement : </label><input type="date" name="dateResa"  placeholder="jj/mm/aaaa"/></p>
             <p><label for="duree">Durée de l'animation :</label><input type="number" name="duree" placeholder="en heures"/></p>
             <p><label for="lieu">Lieu de l'animation :</label><input type="text" name="lieu"></p>
