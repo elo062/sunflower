@@ -8,6 +8,13 @@ $lieu = $_POST['lieu'];
 $message = $_POST['message'];
 $id_user=$_POST['id_user'];
 
+try{
+	$req = $bdd->prepare('SELECT COUNT(id) FROM `reservation` WHERE `dateResa` =' . $date);
+}
+catch (Exception $e) {
+    echo 'La date choisie est déjà prise, merci de choisir une autre date.';
+}
+
 // On insère la réservation en bdd
 $req = $bdd->prepare('INSERT INTO reservation(dateResa, duree, lieu, message) VALUES(:dateResa, :duree, :lieu, :message)');
 $req->execute(array(

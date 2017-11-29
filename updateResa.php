@@ -18,7 +18,7 @@ $requete->execute();
 while ($donnees = $requete->fetch())
 {
   // formulaire permettant de modifier un plat
-  echo "<div class='plat'>
+  echo "<div class='texte'>
     <form method='post' action='traitementUpdateResa.php?idResa=".$idResa."' enctype='multipart/form-data'>
       <p>
         <label for='date'>Modifiez la date de l'événement :</label>
