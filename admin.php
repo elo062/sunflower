@@ -15,10 +15,11 @@ if($password == $hash){
   $_SESSION['client'] = true ;
   $_SESSION['id'] = $result['id'];
   $_SESSION['email'] = $email;
+  $_SESSION['nom'] = $result['nom'];
 
   echo  'Bienvenue ' . htmlspecialchars($result['prenom']) . ' !<br />';
   echo '<a href="enregistrement.php">Réserver</a> / <a href="finResa.php">Mes réservations</a>';
 } else {
-  echo "<div class='false'>Le mot de passe est invalide !</div><br />";
+  echo "<div class='texte'><div class='false'>Le mot de passe est invalide !</div></div><br />";
   header('Location:login.php?message=erreur');
 }

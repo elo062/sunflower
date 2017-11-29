@@ -32,15 +32,23 @@ $mail->Host = 'smtp.domaine.fr';
 $mail->SMTPAuth   = false;
 $mail->Port = 25; // Par défaut
 
+
 // Expéditeur
-$mail->SetFrom('eloisemecozzi@gmail.com', 'Nom Prénom');
+$mail->SetFrom($_SESSION['email'], 'Nom Prénom');
 // Destinataire
 $mail->AddAddress('eloisemecozzi@gmail.com', 'Nom Prénom');
 // Objet
-$mail->Subject = 'Modification réservation';
+$mail->Subject = htmlspecialchars('Modification réservation');
 
 // Votre message
-$mail->MsgHTML($dateResa, $lieu, $duree, $message, $idResa);
+$msg='Nom :'.$_SESSION['nom'].'<br />
+Lieu :'.$lieu.'<br />
+Date de la réservation :'.$dateResa.'<br />
+Durée : '.$duree.'<br />
+Message : '.$message.'<br />
+ID Résa : '.$idResa.'<br /><br />';
+
+$mail->MsgHTML($msg);
 
 // Envoi du mail avec gestion des erreurs
 if(!$mail->Send()) {

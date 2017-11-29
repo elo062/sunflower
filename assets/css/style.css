@@ -45,7 +45,6 @@ table {
 
 /* Fin du Reset*/
 
-
 /* Définition des polices personnalisées */
 
 @font-face
@@ -232,9 +231,11 @@ a {
 }
 
 .texte{
-	margin: 12%;
-	display: flex;
-	justify-content: center;
+margin-top: 12%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
 }
 
 .texte p{
@@ -244,7 +245,8 @@ a {
 }
 
 .texte h1{
-	font-size: 1.8em;
+	margin-top: 50px;
+	font-size: 1.3em;
 	font-weight: bold;
 }
 
@@ -263,6 +265,9 @@ form h1{
 	font-family: 'Poiret One', cursive;
 }
 
+.formulaire{
+	margin: 10% 0;
+}
 
 .formulaire p{
 	margin: 15px 0;
@@ -271,10 +276,13 @@ form h1{
 	width: 500px;
 }
 
-.espace{
-	margin: 12% 0%;
+.reservations{
+	margin-top: 25px;
+	display: flex;
+	justify-content: center;
 }
-.espace a{
+
+.connection a{
 	color: #ffbf00;
 	font-weight: bold;
 }
@@ -287,12 +295,16 @@ form h1{
 	font-weight: bold;
 	font-size: 1.3em;
 	background-color: #ffbf00;
+	cursor: pointer;
 }
-
 
 .button:hover{
 	background-color: yellow;
 	color: black;
+}
+
+#erreur{
+	display: none;
 }
 
 .false{
@@ -321,14 +333,18 @@ form h1{
 /* Footer */
 
 footer{
-	height: 140px;
+	height: 120px;
+	width: 100%;
+	position: relative;
+	/*min-height: 100%*/
 	background-image: url('../img/guitar9.jpg');
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	background-position: center center;
+	background-position: bottom;
 	font-family: 'Poiret One', cursive;
-	bottom: 0;
+	/*position:absolute;*/
+	bottom:0px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;

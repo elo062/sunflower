@@ -9,6 +9,26 @@ $(function() {
       $('html, body').animate({
               scrollTop: elem.offset().top }, 600 );} // on définit un temps de défilement de page
   };
+
+
+// Rendre les champs du formulaire obligatoire
+var $champ = $('.champ'),
+    $erreur = $('#erreur');
+    $envoi = $('#envoi');
+
+   function verifier(champ){
+       if(champ.val() == ""){ // si le champ est vide
+         $envoi.click(function(e){
+             e.preventDefault();}
+           $erreur.css('display', 'block'); // on affiche le message d'erreur
+       }
+   }
+
+
+
+
+
+
   $("a").click(function( event ) { // on attache la fonction au click
     if ( $(this).attr("href").match("#") ) { // on vérifie qu'il s'agit d'une ancre
       // event.preventDefault();

@@ -5,17 +5,14 @@ require_once ("header2.php");
    header('Location:login.php');
  };
 ?>
-
 <div class="texte">
-  <p>Nous avons bien enregistré votre réservation et vous recontacterons dans les plus brefs délais.</p>
-</div>
-<div class="texte">
-  <p>
-  <a href='enregistrement.php'><input type='submit' value='Ajouter une réservation' class='button'></a>
-  <a href='deconnexion.php'><input type='submit' value='Se déconnecter' class='button'></a>
+  <p class="texte">
+    Nous avons bien enregistré votre réservation et vous recontacterons dans les plus brefs délais.
   </p>
-</div>
-<div class="texte">
+  <p class="texte">
+    <a href='enregistrement.php'><input type='submit' value='Ajouter une réservation' class='button'></a>
+    <a href='deconnexion.php'><input type='submit' value='Se déconnecter' class='button'></a>
+  </p>
   <h1>Vos réservations :</h1>
 </div>
 
@@ -37,11 +34,11 @@ foreach($reservations as $reservation)
 {
 				// echo "<div class='separation'><p class='texte'>Utilisateur : " . $reservation['prenom'] . " </p>";
 				// On fait une jointure à gauche entre l'ID des réservations de la table "reservation" et l'id_user de la table "relation_user_resa"
- 				echo "<p class='texte'>Date" . $reservation['dateResa'] . " : <br />" . $reservation['nom'] . " </p>";
- 				echo "<p class='texte'>Lieu : " . $reservation['lieu'] . "</p><br />";
-        echo "<p class='texte'>Durée : " . $reservation['duree'] . " heure(s) </p><br />";
-        echo "<p class='texte'>Vous pouvez modifier ou annuler une réservation jusqu'à 3 mois avant l'événement. Autrement des pénalités vous seront imposées.<br />";
-        echo "<p class='texte'><a href='updateResa.php?idResa=" . $reservation['id'] . "&idUser=" . $reservation['id'] . "'><input type='submit' value='Modifier' class='button' name='idResa'></a>";
+ 				echo "<p class='reservations'>Date : " . $reservation['dateResa'] . "</p>";
+ 				echo "<p class='reservations'>Lieu : " . $reservation['lieu'] . "</p>";
+        echo "<p class='reservations'>Durée : " . $reservation['duree'] . " heure(s) </p>";
+        echo "<p class='reservations'>Vous pouvez modifier ou annuler une réservation jusqu'à 3 mois avant l'événement.</p> <p class='reservations'>Autrement des pénalités vous seront imposées.</p>";
+        echo "<p class='reservations'><a href='updateResa.php?idResa=" . $reservation['id_resa'] . "'><input type='submit' value='Modifier' class='button' name='idResa'></a>";
 				// Lorsqu'on clique sur "supprimer" on récupère l'ID du plat et on est redirigé vers la page supprimerPlat.php pour le traitement
  				echo "<a href='supprimerResa.php?idResa=" . $reservation['id_resa'] . "&idUser=" . $reservation['id_user'] . "'><input type='submit' value='Annuler' class='button' name='idResa'></a></p>";
 				echo "<hr>";
