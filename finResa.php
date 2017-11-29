@@ -1,14 +1,19 @@
 <?php
 session_start();
 require_once ("header2.php");
+ if(!isset($_SESSION['id'])){
+   header('Location:login.php');
+ };
 ?>
 
 <div class="texte">
   <p>Nous avons bien enregistré votre réservation et vous recontacterons dans les plus brefs délais.</p>
 </div>
 <div class="texte">
+  <p>
   <a href='enregistrement.php'><input type='submit' value='Ajouter une réservation' class='button'></a>
   <a href='deconnexion.php'><input type='submit' value='Se déconnecter' class='button'></a>
+  </p>
 </div>
 <div class="texte">
   <h1>Vos réservations :</h1>

@@ -22,7 +22,6 @@
       <li class="op-v-item"><a class="op-v-link" href="#mysect3">MENU ITEM 3</a></li>
       <li class="op-v-item"><a class="op-v-link" href="#mysect4">MENU ITEM 4</a></li>
       <li class="op-v-item"><a class="op-v-link" href="#mysect5">MENU ITEM 5</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="#mysect6">MENU ITEM 6</a></li>
       <li class="op-v-item"><a class="op-v-link" href="enregistrement.php">Réservation</a></li>
       <!-- <li class="op-v-item"><a class="op-v-link" href="backoffice.php">Back-office</a></a></li> -->
     </ul>
@@ -40,7 +39,6 @@
 <li class="op-v-item"><a class="op-v-link" href="#mysect3"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Directement à la section 3</span></span></a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect4"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Se rendre à la section 4</span></span></a></li>
 <li class="op-v-item"><a class="op-v-link" href="#mysect5"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Voir la section 5</span></span></a></li>
-<li class="op-v-item"><a class="op-v-link" href="#mysect6"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Dernière section de la page</span></span></a></li>
 </ul>
 </div>
 <!-- end vertical navigation -->

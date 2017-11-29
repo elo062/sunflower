@@ -17,9 +17,6 @@
   <section id="mysect5">
     <h1>SECTION 5</h1>
   </section>
-  <section id="mysect6">
-    <h1>SECTION 6</h1>
-  </section>
 </div>
 <!-- end sections -->
 

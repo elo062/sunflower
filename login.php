@@ -11,7 +11,7 @@ if ($message == "erreur"){
     <form action="admin.php" method="post">
         E-mail :   <input type="email" name="email"><br>
         Mot de passe : <input type="password" name="mdp"><br>
-        <input type="submit" value="Se connecter">
+        <input type="submit" value="Se connecter" class="button">
     </form>
   </div>
 <?php require_once ("footer.php"); ?>

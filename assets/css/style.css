@@ -70,6 +70,7 @@ table {
 	text-align:center;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	font-family: 'Comfortaa', cursive;
 }
 #op-horizontalnav .op-v-item {
@@ -211,6 +212,10 @@ section h1 {
 	background-position: center center;
 }
 
+a {
+	text-decoration: none;
+}
+
 /* Boutique */
 
 .boutique{
@@ -226,9 +231,14 @@ section h1 {
 	flex-direction: column;
 }
 
-.texte {
-	margin: 8%;
-	text-decoration: none;
+.texte{
+	margin: 12%;
+	display: flex;
+	justify-content: center;
+}
+
+.texte p{
+	margin: 1%;
 	display: flex;
 	justify-content: center;
 }
@@ -265,7 +275,6 @@ form h1{
 	margin: 12% 0%;
 }
 .espace a{
-	text-decoration: none;
 	color: #ffbf00;
 	font-weight: bold;
 }
@@ -273,7 +282,7 @@ form h1{
 .button{
 	margin: 12% 0% 3% 0%;
 	padding: 5px;
-	border-radius: 5px;
+	border-radius: 8px;
 	font-family: 'Poiret One', cursive;
 	font-weight: bold;
 	font-size: 1.3em;
@@ -282,9 +291,8 @@ form h1{
 
 
 .button:hover{
-	background-color: white;
+	background-color: yellow;
 	color: black;
-	border: 3px solid #ffbf00;
 }
 
 .false{
@@ -336,7 +344,6 @@ footer{
 }
 
 .footer a {
-	text-decoration: none;
 	color: black;
 }
 
@@ -354,7 +361,6 @@ footer{
 }
 
 .rs a{
-    text-decoration: none;
     color: black;
 }
 .rs a:hover{

@@ -25,7 +25,7 @@ $req->execute(array(
 
 
 // Envoi du mail pour prévenir qu'il y a une résa :
-require('phpmailer/class.phpmailer.php');
+require('PHPMailer/class.phpmailer.php');
 
 $mail = new PHPMailer();
 $mail->Host = 'smtp.domaine.fr';
@@ -35,12 +35,12 @@ $mail->Port = 25; // Par défaut
 // Expéditeur
 $mail->SetFrom('eloisemecozzi@gmail.com', 'Nom Prénom');
 // Destinataire
-$mail->AddAddress('eloise@gmail.com', 'Nom Prénom');
+$mail->AddAddress('eloisemecozzi@gmail.com', 'Nom Prénom');
 // Objet
 $mail->Subject = 'Modification réservation';
 
 // Votre message
-$mail->MsgHTML(echo $dateResa, $lieu, $duree, $message, $idResa);
+$mail->MsgHTML($dateResa, $lieu, $duree, $message, $idResa);
 
 // Envoi du mail avec gestion des erreurs
 if(!$mail->Send()) {

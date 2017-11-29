@@ -7,7 +7,7 @@ $(function() {
 		elem = $("#"+id); }
     if ( typeof elem.offset()  !== "undefined" ) { // si l'élément existe, on continue
       $('html, body').animate({
-              scrollTop: elem.offset().top }, 600 );} // on défini un temps de défilement de page
+              scrollTop: elem.offset().top }, 600 );} // on définit un temps de défilement de page
   };
   $("a").click(function( event ) { // on attache la fonction au click
     if ( $(this).attr("href").match("#") ) { // on vérifie qu'il s'agit d'une ancre
