@@ -1,11 +1,9 @@
 <?php
-// Pour les headers et footers il vaut mieux un require_once pour ne pas recharger la requête à chaque fois. Le require_once garde la requête en mémoire => si on utilise plusieurs fois cette requête il vaut mieux la garder en mémoire pour ne la charger qu'une fois.
 session_start();
 require_once("header.php");
 require_once("./config/connexion.php");
 
-
-// On définit la variable $idResa en récupérant le ? idResa = de la boucle foreach résultatPlat.php
+// On définit la variable $idResa en récupérant le ? idResa = de la boucle foreach finResa.php
 $idResa = $_GET['idResa'];
 $idUser = $_SESSION['id'];
 
@@ -19,7 +17,7 @@ if ($donneeResa['nombreResa'] == 0) {
   echo "<div class='texte'>Cette réservation ne vous appartient pas.</div>";
 }else{
   // On sélectionne la résa à modifier :
-  $requete = $bdd->prepare('SELECT * FROM reservation WHERE id = :id_resa'); // :id_plats est inventé ici, il doit crspdre au 1er paramètre de bindParam
+  $requete = $bdd->prepare('SELECT * FROM reservation WHERE id = :id_resa'); // :id_resa est inventé ici, il doit crspdre au 1er paramètre de bindParam
   $requete->bindParam(':id_resa', $idResa);
   $requete->execute();
 
@@ -27,7 +25,7 @@ if ($donneeResa['nombreResa'] == 0) {
   // On exécute la requête
   while ($donnees = $requete->fetch())
   {
-    // formulaire permettant de modifier un plat
+    // formulaire permettant de modifier une résa
     echo "<div class='texte'>
       <form method='post' action='traitementUpdateResa.php?idResa=".$idResa."' enctype='multipart/form-data'>
         <p>
@@ -49,8 +47,6 @@ if ($donneeResa['nombreResa'] == 0) {
     </div>";
   }
 };
-
-
 
 require_once ("footer.php");
 ?>

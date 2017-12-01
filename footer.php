@@ -1,11 +1,5 @@
     <footer>
-        <div class="footer">
-          <p><a href="contact.php">Contact</a></p>
-          <p>|</p>
-          <p><a href="boutique.php">Boutique</a></p>
-          <p>|</p>
-          <p><a href="backoffice.php">Back-office</a></p>
-        </div>
+
         <div class="rs">
           <ul>
             <li><a href="#" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
@@ -16,7 +10,7 @@
         <div class="footer">
           <p><a href="#">Mentions Légales</a></p>
           <p>|</p>
-          <p><a href="#">CGV</a></p>
+          <p><a href="#">Contact</a></p>
           <p>|</p>
           <p><a href="#">Plan du site</a></p>
           <a href="#" class="scrollToTop"><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true"></i></a>

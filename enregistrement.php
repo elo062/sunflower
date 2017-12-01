@@ -3,11 +3,9 @@
 require_once ("header.php");
 
 if (empty($_SESSION['id']))
-//les membres connectés ne peuvent pas s'inscrirent
+// si le visiteur n'est pas connecté on lui propose de s'inscrire ou de se connecter
 {
 ?>
-
-<!--Nom (type : text) , Email(type : email), Tél ( type : tel )-->
 <div class="texte">
     <form action="traitementCreerCompte.php" method="post" enctype="multipart/form-data">
       <h1>Créer un compte</h1>
@@ -35,24 +33,24 @@ if (empty($_SESSION['id']))
 
              <p><label for="password"><strong>Vérification du mot de passe :<strong></label>
                <input type="password" name="password" maxlength="14" id="vpassword" class="champ" required/></p>
-            </div>
-
-            <p><input type="checkbox" name="showpsd" class="showpsd"/><label for="showpsd">Montrer le mot de passe</label></p>
-            <div id="erreur">
-              <p>Vous n'avez pas rempli correctement les champs du formulaire !</p>
-            </div>
-            <p><input type="submit" name="envoyer" value="Envoyer" class="button" id="envoi"></p>
-
+          </div>
+          <div id="erreur">
+            <p>Vous n'avez pas rempli correctement les champs du formulaire !</p>
+          </div>
+          <p><input type="submit" name="envoyer" value="Envoyer" class="button" id="envoi"></p>
       </form>
   </div>
   <?php
   }else{
+    // Si le visiteur est connecté on l'autorise à réserver :
     echo "<div class='texte'><a href='deconnexion.php'><input type='submit' value='Se déconnecter' class='button'></a></div>";
     ?>
     <div class='reservations'>
-      <form action="traitementResa.php" method="post" enctype="multipart/form-data"> <!-- On prévient le serveur qu'on va envoyer des infos -->
+      <form action="traitementResa.php" method="post" enctype="multipart/form-data">
+        <!-- On récupère l'id_user pour la page traitementResa.php -->
           <input type="hidden" name="id_user" value="<?php echo $_SESSION['id']; ?>" />
           <?php
+          // On récupère le message d'erreur de la page traitementResa.php si la date est déjà réservée
           if($_GET['message']=='erreurDate'){
             echo "<div class='false'>La date choisie est déjà prise, merci d'en choisir une autre.</div></br>";
           };

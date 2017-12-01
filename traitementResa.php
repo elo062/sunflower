@@ -14,14 +14,14 @@ try{
 	  'dateResa' => $date
 		));
 		$dateResa = $req->fetch();
-
+// On envoie un message d'erreur si la date est déjà prise :
 		if($dateResa['dateResaBdd'] == 1){
 			header('Location:enregistrement.php?message=erreurDate');
 			exit;
 		}
 }
 catch (Exception $e) {
-    echo 'La date choisie est déjà prise, merci de choisir une autre date.';
+    echo 'La base de donnée rencontre un problème, merci de nous en informer via le formulaire de contact.';
 }
 
 // On insère la réservation en bdd

@@ -18,7 +18,7 @@ var $champ = $('.champ'),
    function verifier(champ){
        if(champ.val() == ""){ // si le champ est vide
          $envoi.click(function(e){
-             e.preventDefault();}
+             e.preventDefault();})
            $erreur.css('display', 'block'); // on affiche le message d'erreur
        }
    }

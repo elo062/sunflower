@@ -2,18 +2,15 @@
 // On se connecte à la bdd
 require_once("./config/connexion.php");
 
-// On déclare les variables name
+// On déclare les variables
 $dateResa = $_POST['dateResa'];
 $lieu = $_POST['lieu'];
 $duree = $_POST['duree'];
 $message = $_POST['message'];
-// On récupère l'id du plat de la page updatePlat.php
+// On récupère l'id de la résa de la page updateResa.php
 $idResa = $_GET['idResa'];
 
-// try catch = bonne pratique pour signaler une erreur à l'internaute
-
-
-// On modifie une entrée dans la table plats
+// On modifie les entrées dans la table reservation
 $req = $bdd->prepare('UPDATE `sunflower`.`reservation` SET `dateResa` = :dateResa, `lieu` = :lieu, `duree` = :duree, `message` = :message WHERE `reservation`.`id` = :id_resa');
 $req->execute(array(
   'dateResa' => $dateResa,
@@ -23,7 +20,6 @@ $req->execute(array(
   'id_resa' => $idResa
 ));
 
-
 // Envoi du mail pour prévenir qu'il y a une résa :
 require('PHPMailer/class.phpmailer.php');
 
@@ -31,7 +27,6 @@ $mail = new PHPMailer();
 $mail->Host = 'smtp.domaine.fr';
 $mail->SMTPAuth   = false;
 $mail->Port = 25; // Par défaut
-
 
 // Expéditeur
 $mail->SetFrom($_SESSION['email'], 'Nom Prénom');
@@ -57,7 +52,6 @@ if(!$mail->Send()) {
   echo 'Message envoyé !';
 }
 
-
-// Redirection vers la page resultatPlat.php
+// Redirection vers la page finResa.php
 header('Location:finResa.php');
 ?>
