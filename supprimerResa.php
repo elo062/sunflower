@@ -1,5 +1,5 @@
 <?php
-require_once("header2.php");
+require_once("header.php");
 require_once("./config/connexion.php");
 
 // On définit la variable idPlat en récupérant l'ID de resultatPlat.php
@@ -18,6 +18,8 @@ $requete->bindParam(':id', $idResa);
 $requete->execute();
 
 echo  "<p class='texte'>Votre réservation a bien été supprimée.</p>";
+echo "<div class='reservations'><div class='button'><a href='enregistrement.php'>Réserver</a></div></div><br />";
+echo "<div class='reservations'><div class='button'><a href='finResa.php'>Mes réservations</a></div></div>";
 
 
 require_once("footer.php");

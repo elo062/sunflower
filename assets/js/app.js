@@ -1,4 +1,3 @@
-
 /* ====== Add Smooth effect ===== */
 $(function() {
   var scrollToAnchor = function( id ) {
@@ -25,10 +24,7 @@ var $champ = $('.champ'),
    }
 
 
-
-
-
-
+// Menu scroll
   $("a").click(function( event ) { // on attache la fonction au click
     if ( $(this).attr("href").match("#") ) { // on vérifie qu'il s'agit d'une ancre
       // event.preventDefault();

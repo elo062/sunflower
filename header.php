@@ -12,33 +12,19 @@
 </head>
 
 <!-- Start horizontal navigation -->
-
 <nav>
-  <div id="op-horizontalnav">
-    <ul class="op-sectionlist">
-      <li class="op-v-item"><a class="op-v-link" href="index.php"><img src="assets/img/sunflower-logo1.png" alt="logo sunflower" title="Accueil" class="icone"></a></li>
-      <li class="op-v-item"><a class="op-v-link" href="#mysect1">Présentation</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="#mysect2">MENU ITEM 2</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="#mysect3">MENU ITEM 3</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="#mysect4">MENU ITEM 4</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="#mysect5">MENU ITEM 5</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="enregistrement.php">Réservation</a></li>
-      <!-- <li class="op-v-item"><a class="op-v-link" href="backoffice.php">Back-office</a></a></li> -->
-    </ul>
-  </div>
-</nav>
-<!-- end horizontal navigation -->
-<div class="menuSandwich"><img src="assets/img/menu-sandwich.png" alt="menu" title="menu"></div>
-
-
-<!-- Start vertical navigation -->
-<div id="op-verticalnav">
+<div id="op-horizontalnav">
 <ul class="op-sectionlist">
-<li class="op-v-item"><a class="op-v-link" href="#mysect1"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Naviguer vers la section 1</span></span></a></li>
-<li class="op-v-item"><a class="op-v-link" href="#mysect2"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Lire la section 2</span></span></a></li>
-<li class="op-v-item"><a class="op-v-link" href="#mysect3"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Directement à la section 3</span></span></a></li>
-<li class="op-v-item"><a class="op-v-link" href="#mysect4"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Se rendre à la section 4</span></span></a></li>
-<li class="op-v-item"><a class="op-v-link" href="#mysect5"><span class="v-marker"></span><span class="op-v-itemdesc"><span class="op-v-itembg">Voir la section 5</span></span></a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php"><img src="assets/img/sunflower-logo1.png"alt="logo sunflowrer" title="Accueil"></a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php#mysect1">Présentation</a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php#mysect2">MENU ITEM 2</a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php#mysect3">MENU ITEM 3</a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php#mysect4">MENU ITEM 4</a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php#mysect5">MENU ITEM 5</a></li>
+<li class="op-v-item"><a class="op-v-link" href="index.php#mysect6">MENU ITEM 6</a></li>
+<li class="op-v-item"><a class="op-v-link" href="enregistrement.php">Réservation</a></li>
+<!-- <li class="op-v-item"><a class="op-v-link" href="boutique.php">Boutique</a></a></li> -->
 </ul>
+<div class="menuSandwich"><img src="assets/img/menu-sandwich.png" alt="menu" title="menu"></div>
 </div>
-<!-- end vertical navigation -->
+</nav>

@@ -1,6 +1,6 @@
 <?php
  session_start();
-require_once ("header2.php");
+require_once ("header.php");
 
 if (empty($_SESSION['id']))
 //les membres connectés ne peuvent pas s'inscrirent

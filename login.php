@@ -1,4 +1,4 @@
-<?php require_once ("header2.php");
+<?php require_once ("header.php");
 
 $message=$_GET['message'];
 if ($message == "erreur"){

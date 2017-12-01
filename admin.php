@@ -1,6 +1,7 @@
 <?php
 session_start();
 // On se connecte à la bdd
+require_once ("header.php");
 require_once("./config/connexion.php");
 $email = $_POST['email'];
 $password = sha1($_POST['mdp']);
@@ -17,9 +18,11 @@ if($password == $hash){
   $_SESSION['email'] = $email;
   $_SESSION['nom'] = $result['nom'];
 
-  echo  'Bienvenue ' . htmlspecialchars($result['prenom']) . ' !<br />';
-  echo '<a href="enregistrement.php">Réserver</a> / <a href="finResa.php">Mes réservations</a>';
+  echo  "<div class='texte'>Bienvenue " . htmlspecialchars($result['prenom']) . " !<br /></div>";
+  echo "<div class='reservations'><div class='button'><a href='enregistrement.php'>Réserver</a></div></div><br />";
+   echo "<div class='reservations'><div class='button'><a href='finResa.php'>Mes réservations</a></div></div>";
 } else {
   echo "<div class='texte'><div class='false'>Le mot de passe est invalide !</div></div><br />";
   header('Location:login.php?message=erreur');
 }
+require_once ("footer.php");

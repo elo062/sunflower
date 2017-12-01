@@ -25,9 +25,19 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
-	line-height: 1;
+	/*line-height: 1;*/
 	font-family: 'Comfortaa', cursive;
+	position: relative;
+ margin: 0;
+ padding-bottom: 6rem;
+ min-height: 100%;
 }
 
 blockquote, q {
@@ -277,7 +287,7 @@ form h1{
 }
 
 .reservations{
-	margin-top: 25px;
+	margin: 25px 0px;
 	display: flex;
 	justify-content: center;
 }
@@ -299,6 +309,23 @@ form h1{
 }
 
 .button:hover{
+	background-color: yellow;
+	color: black;
+}
+
+.button a{
+	margin: 12% 0% 3% 0%;
+	padding: 5px;
+	border-radius: 8px;
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+	font-size: 1em;
+	background-color: #ffbf00;
+	cursor: pointer;
+	color:dimgrey;
+}
+
+.button a:hover{
 	background-color: yellow;
 	color: black;
 }
@@ -334,21 +361,21 @@ form h1{
 
 footer{
 	height: 120px;
-	width: 100%;
-	position: relative;
-	/*min-height: 100%*/
 	background-image: url('../img/guitar9.jpg');
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: bottom;
 	font-family: 'Poiret One', cursive;
-	/*position:absolute;*/
-	bottom:0px;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
+	position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*padding: 1rem;*/
 }
 
 .footer{
