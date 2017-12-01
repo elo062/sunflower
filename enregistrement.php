@@ -50,14 +50,13 @@ if (empty($_SESSION['id']))
     echo "<div class='texte'><a href='deconnexion.php'><input type='submit' value='Se déconnecter' class='button'></a></div>";
     ?>
     <div class='reservations'>
-      <?php
-      if($_GET['message']=='erreurDate'){
-        echo "<div class='texte'>La date choisie est déjà prise, merci de choisir une autre date.</div>";
-      };
-      ?>
       <form action="traitementResa.php" method="post" enctype="multipart/form-data"> <!-- On prévient le serveur qu'on va envoyer des infos -->
-
           <input type="hidden" name="id_user" value="<?php echo $_SESSION['id']; ?>" />
+          <?php
+          if($_GET['message']=='erreurDate'){
+            echo "<div class='false'>La date choisie est déjà prise, merci d'en choisir une autre.</div></br>";
+          };
+          ?>
           <p><label for="date">Date de l'événement : </label><input type="date" name="dateResa"  placeholder="jj/mm/aaaa" class="champ" required/></p>
           <p><label for="duree">Durée de l'animation :</label><input type="number" name="duree" placeholder="en heures" class="champ" required/></p>
           <p><label for="lieu">Lieu de l'animation :</label><input type="text" name="lieu" class="champ" required/></p>
