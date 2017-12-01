@@ -1,6 +1,9 @@
 <?php
 session_start();
 require_once ("header.php");
+if(!isset($_SESSION['id'])){
+  header('Location:login.php');
+};
 ?>
 
 <div class="texte">

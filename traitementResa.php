@@ -7,9 +7,18 @@ $duree = $_POST['duree'];
 $lieu = $_POST['lieu'];
 $message = $_POST['message'];
 $id_user=$_POST['id_user'];
-
+echo $date;
 try{
-	$req = $bdd->prepare('SELECT COUNT(id) FROM `reservation` WHERE `dateResa` =' . $date);
+	$req = $bdd->prepare('SELECT COUNT(id) AS dateResaBdd FROM `reservation` WHERE `dateResa` = :dateResa ');
+	$req->execute(array(
+	  'dateResa' => $date
+		));
+		$dateResa = $req->fetch();
+
+		if($dateResa['dateResaBdd'] == 1){
+			header('Location:enregistrement.php?message=erreurDate');
+			exit;
+		}
 }
 catch (Exception $e) {
     echo 'La date choisie est déjà prise, merci de choisir une autre date.';

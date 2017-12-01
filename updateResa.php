@@ -14,8 +14,8 @@ $requete = $bdd->prepare('SELECT COUNT(id) AS nombreResa FROM relation_user_resa
 $requete->bindParam(':id_resa', $idResa);
 $requete->bindParam(':id_user', $idUser);
 $requete->execute();
-$donnees = $requete->fetch();
-if ($donnees['nombreResa'] == 0) {
+$donneeResa = $requete->fetch();
+if ($donneeResa['nombreResa'] == 0) {
   echo "<div class='texte'>Cette réservation ne vous appartient pas.</div>";
 }else{
   // On sélectionne la résa à modifier :
