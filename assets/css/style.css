@@ -65,7 +65,7 @@ table {
 
 /*== Menu horizontal ==*/
 #op-horizontalnav {
-	background:black;
+	background: rgba(000, 000, 000, 0.7);
 	position:fixed;
 	top:0;
 	right:0;
@@ -98,67 +98,6 @@ table {
 	color:#171717
 }
 
-
-/*== Menu vertical ==*/
-#op-verticalnav {
-	position:fixed;
-	top:0;
-	right:0;
-	left: auto;
-	height: 100%;
-	display:table
-}
-#op-verticalnav .op-sectionlist {
-	height:100%;
-	text-align:center;
-	display:table-cell;
-	vertical-align:middle
-}
-
-#op-verticalnav .op-v-item {
-	display:block
-}
-#op-verticalnav .justify-height {}
-#op-verticalnav .op-v-link {
-	display:block;
-	margin:12px 0
-}
-#op-verticalnav .v-marker {
-	width:15px;
-	height:15px;
-	border-radius:50%;
-	background-color:#ffbf00;
-	display:inline-block;
-	vertical-align:middle;
-	margin-bottom:-2px;
-	margin-right:10px;
-	border: 1px solid #e1001b;
-}
-#op-verticalnav .op-v-link:hover .v-marker, #op-verticalnav .op-v-item .op-v-link.active .v-marker {
-	background-color: #ff8100;
-}
-#op-verticalnav .op-v-itemdesc {
-	display:inline-block;
-	font-size:14px;
-	position:absolute;
-	white-space:nowrap;
-	line-height:normal;
-	padding:0 34px 0 0;
-	vertical-align:middle
-}
-#op-verticalnav .op-v-itemdesc .op-v-itembg{
-	display:inline-block;
-	background-color:rgba(0,0,0,.5);
-	color:#fff;
-	padding:4px 10px 6px 10px;
-	border:1px solid rgba(160,160,160,.2);
-	border-radius:4px;
-}
-#op-verticalnav .op-v-link:hover .op-v-itemdesc {
-	right:0px;
-}
-
-
 /*== Sections ==*/
 section h1 {
 	padding:450px;
@@ -167,9 +106,6 @@ section h1 {
 	border-top:1px solid rgb(255,205,63);
 	margin:0;
 }
-/*section:nth-child(even) h1 {
-	background:#222;
-	}*/
 
 	/*on différencie la couleur 1 section sur 2*/
 
@@ -189,12 +125,39 @@ section h1 {
 	background-position: center center;
 }
 
+.presentation{
+	color: white;
+	background-color: rgba(000, 000, 000, 0.6);
+	margin: auto;
+	text-align: justify;
+	width: 70%;
+	padding: 5%;
+	font-size: 1.1em;
+}
+
+.presentation p, ul{
+	margin: 2%;
+	padding: 0px 50px;
+}
+
+.presentation h2{
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+	font-size: 1.3em;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
 #mysect3{
 	background-image: url('../img/guitar6.jpg');
 	background-repeat:no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
 	background-position: center center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 #mysect4{
