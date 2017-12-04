@@ -103,7 +103,6 @@ section h1 {
 	padding:450px;
 	text-align:center;
 	color:white;
-	border-top:1px solid rgb(255,205,63);
 	margin:0;
 }
 
@@ -127,7 +126,7 @@ section h1 {
 
 .presentation{
 	color: white;
-	background-color: rgba(000, 000, 000, 0.6);
+	background-color: rgba(000, 000, 000, 0.7);
 	margin: auto;
 	text-align: justify;
 	width: 70%;
@@ -401,11 +400,36 @@ footer{
 	.menuSandwich{
 		position: fixed;
 		z-index: 1000;
-		width: 100px;
-		margin: 20px 20px;
+		margin: 10px;
+	}
+	#logo{
+		display: none;
 	}
 	#op-horizontalnav .op-sectionlist {
 		flex-direction: column;
+	}
+	.presentation{
+		width: 65%;
+		text-align: initial;
+		font-size: 1em;
+	}
+	.presentation h2{
+		font-size: 1.2em;
+	}
+	.presentation p, ul{
+		margin: 2%;
+		padding: 0px;
+	}
+	.menuSandwich{
+		margin: 3px 0px;
+	}
+	.scrollToTop{
+		bottom: 17px;
+		right: 10px;
+		padding: 0;
+	}
+	.video{
+		max-width: 350px;
 	}
 	.texte{
 		margin-top: 30%;

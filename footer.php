@@ -13,7 +13,7 @@
           <p><a href="#">Contact</a></p>
           <p>|</p>
           <p><a href="#">Plan du site</a></p>
-          <a href="#" class="scrollToTop"><i class="fa fa-arrow-circle-o-up fa-2x" aria-hidden="true"></i></a>
+          <a href="#"><img src="assets/img/arrow.png" alt="arrow" title="arrow" class="scrollToTop"></a>
         </div>
 
     </footer>

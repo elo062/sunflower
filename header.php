@@ -15,14 +15,14 @@
 <nav>
   <div id="op-horizontalnav">
     <ul class="op-sectionlist">
-      <li class="op-v-item"><a class="op-v-link" href="index.php"><img src="assets/img/sunflower-logo1.png"alt="logo sunflowrer" title="Accueil"></a></li>
-      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect1">Présentation</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect2">MENU ITEM 2</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect3">MENU ITEM 3</a></li>
+      <li class="op-v-item"><a class="op-v-link" href="index.php"><img src="assets/img/sunflower-logo1.png"alt="logo sunflower" title="Accueil" id="logo"></a></li>
+      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect1">PHOTOS</a></li>
+      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect2">PRÉSENTATION</a></li>
+      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect3">DÉMO</a></li>
       <li class="op-v-item"><a class="op-v-link" href="index.php#mysect4">MENU ITEM 4</a></li>
       <li class="op-v-item"><a class="op-v-link" href="index.php#mysect5">MENU ITEM 5</a></li>
       <!-- <li class="op-v-item"><a class="op-v-link" href="index.php#mysect6">MENU ITEM 6</a></li> -->
-      <li class="op-v-item"><a class="op-v-link" href="enregistrement.php">Réservation</a></li>
+      <li class="op-v-item"><a class="op-v-link" href="enregistrement.php">RÉSERVATION</a></li>
     </ul>
     <div class="menuSandwich"><img src="assets/img/menu-sandwich.png" alt="menu" title="menu"></div>
   </div>

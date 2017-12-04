@@ -1,5 +1,16 @@
 /* ====== Add Smooth effect ===== */
 $(function() {
+  // On fait apparaître le menu sandwich et disparaitre les boutons de navigation sur petit écran
+        var windowWidth= $(window).width();
+        if(windowWidth < 600){
+          $(".op-sectionlist").hide();
+          $(".menuSandwich").show();
+        }
+        // On fait disparaître le menu sandwich sur grand écran
+      if(windowWidth > 600){
+        $(".menuSandwich").hide();
+      }
+
   var scrollToAnchor = function( id ) {
     var elem = $("section[id='"+ id +"']"); // on crée une balise d'ancrage
     if ( typeof elem.offset()  === "undefined" ) { // on verifie si l'élément existe
@@ -27,7 +38,6 @@ var $champ = $('.champ'),
 // Menu scroll
   $("a").click(function( event ) { // on attache la fonction au click
     if ( $(this).attr("href").match("#") ) { // on vérifie qu'il s'agit d'une ancre
-      // event.preventDefault();
       var href = $(this).attr('href').replace('#', '') // on scroll vers la cible
       scrollToAnchor( href ); }
 
@@ -35,7 +45,6 @@ var $champ = $('.champ'),
       var windowWidth= $(window).width();
       if(windowWidth < 600){
         $(".op-sectionlist").hide();
-        $("#op-verticalnav").hide();
         $(".menuSandwich").show();
       }
       // On fait disparaître le menu sandwich sur grand écran
@@ -52,7 +61,7 @@ var $champ = $('.champ'),
 
 /* ====== add class on pagination if the section is visible ====== */
   $(document).scroll(function() {
-    var cutoff = $(window).scrollTop() + 200; // on défini la position de déclenchement (*1)
+    var cutoff = $(window).scrollTop() + 200; // on définit la position de déclenchement (*1)
     // Find current section and highlight nav menu
     var curSec = $.find('.current'); // on cherche l'élément (section) avec la class current
     var curID = $(curSec).attr('id'); // on récupère son ID
