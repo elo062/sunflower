@@ -312,7 +312,7 @@ form h1{
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  height: 40px;
+  height: 50px;
   width: auto;
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
@@ -447,13 +447,13 @@ footer{
 		margin: 3% 0%;
 	}
 	footer{
-		height: 150px;
+		height: 130px;
 	}
 	.footer{
 		max-width: 80%;
-		font-size: 1.1em;
+		font-size: 1.2em;
 	}
 	.rs {
-		font-size: 0.8em;
+		font-size: 1.1em;
 	}
 }
