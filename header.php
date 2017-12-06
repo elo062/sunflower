@@ -16,11 +16,11 @@
   <div id="op-horizontalnav">
     <ul class="op-sectionlist">
       <li class="op-v-item"><a class="op-v-link" href="index.php"><img src="assets/img/sunflower-logo1.png"alt="logo sunflower" title="Accueil" id="logo"></a></li>
-      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect1">PHOTOS</a></li>
+      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect1">Accueil</a></li>
       <li class="op-v-item"><a class="op-v-link" href="index.php#mysect2">PRÉSENTATION</a></li>
       <li class="op-v-item"><a class="op-v-link" href="index.php#mysect3">DÉMO</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect4">MENU ITEM 4</a></li>
-      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect5">MENU ITEM 5</a></li>
+      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect4">Tarifs</a></li>
+      <li class="op-v-item"><a class="op-v-link" href="index.php#mysect5">Contact</a></li>
       <!-- <li class="op-v-item"><a class="op-v-link" href="index.php#mysect6">MENU ITEM 6</a></li> -->
       <li class="op-v-item"><a class="op-v-link" href="enregistrement.php">RÉSERVATION</a></li>
     </ul>
