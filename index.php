@@ -40,6 +40,9 @@
   <section id="mysect5">
     <h1>SECTION 5</h1>
   </section>
+    <section id="reservation">
+    <h1>SECTION 5</h1>
+  </section>
 </div>
 <!-- end sections -->
 

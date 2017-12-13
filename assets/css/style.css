@@ -25,6 +25,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+a {
+	text-decoration: none;
+	color: #ffbf00;
+}
 
 html {
   height: 100%;
@@ -69,7 +73,8 @@ table {
 	position:fixed;
 	top:0;
 	right:0;
-	left:0
+	left:0;
+
 }
 #op-horizontalnav .op-sectionlist {
 	width:100%;
@@ -87,9 +92,28 @@ table {
 	display:table-cell;
 	font-size:18px;
 }
+#op-horizontalnav .op-v-item.contact {
+	font-family: 'Poiret One', cursive;
+	font-size: 18px;
+	font-weight: bold;
+}
+#op-horizontalnav .op-v-item.contact span:first-child{
+	color: #f7edd6;
+}
+#op-horizontalnav .op-v-item span{
+	display: block;
+	color: #fc8704;
+}
+#op-horizontalnav .op-v-item span i{
+	margin-right: 6px;
+}
+#op-horizontalnav .op-v-item span i.fa.fa-phone{
+	font-size: 15px;
+}
 #op-horizontalnav .op-v-item .op-v-link {
 	color:#fff;
 	padding:16px 8px;
+	font-style: normal;
 	display:block;
 	text-decoration:none;
 }
@@ -183,9 +207,7 @@ section h1 {
 	background-position: center center;
 }
 
-a {
-	text-decoration: none;
-}
+
 
 /* Boutique */
 
@@ -254,10 +276,7 @@ form h1{
 	justify-content: center;
 }
 
-.connection a{
-	color: #ffbf00;
-	font-weight: bold;
-}
+
 
 .button{
 	margin: 12% 0% 3% 0%;
