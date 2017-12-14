@@ -1,7 +1,7 @@
 // Une fois que le doc est chargé
 $(document).ready(function () {
     // On ajoute un évènement click sur les liens du menu
-$("#op-horizontalnav .op-v-link").click(function() {
+$(".rubrique .lien-rubrique").click(function() {
     // On récupère le lien de l'élément cliqué
     var lienClique = $(this).attr('href');
     // On récupère la position de l'élément "#"
@@ -13,7 +13,7 @@ $("#op-horizontalnav .op-v-link").click(function() {
     $('html,body').animate(
         {
             // En retirant la hauteur du menu pour voir correctement la section
-            scrollTop: $(anchor).offset().top - $( "#op-horizontalnav" ).height()
+            scrollTop: $(anchor).offset().top - $( ".rubrique" ).height()
 
 },
         'slow');

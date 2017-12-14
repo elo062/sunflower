@@ -90,7 +90,7 @@ a {
 //  align-items: center;
 //  font-family: 'Comfortaa', cursive;
 //}
-//.navbar-header .op-v-item {
+//.navbar-header .rubrique {
 //  list-style:none;
 //  display:table-cell;
 //  font-size:18px;
@@ -124,14 +124,14 @@ a {
 //.navbar-header  span i.fa.fa-phone{
 //  font-size: 15px;
 //}
-//.navbar-header  .op-v-link {
+//.navbar-header  .lien-rubrique {
 //  color:#fff;
 //  padding:16px 8px;
 //  font-style: normal;
 //  display:block;
 //  text-decoration:none;
 //}
-//.navbar-header  .op-v-link:hover, .navbar-header .op-v-link.active {
+//.navbar-header  .lien-rubrique:hover, .navbar-header .lien-rubrique.active {
 //  background-color:#fff;
 //  color:#171717
 //}
@@ -157,7 +157,7 @@ section h1 {
 }
 
 #presentation{
-  background-image: url('#{$chemin_images}music.jpg');
+  background-image: url('#{$chemin_images}bg-presentation.jpg');
   background-repeat:no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -188,7 +188,7 @@ section h1 {
 }
 
 #demo{
-  background-image: url('#{$chemin_images}guitar6.jpg');
+  background-image: url('#{$chemin_images}bg-demo.jpg');
   background-repeat:no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -200,7 +200,7 @@ section h1 {
 }
 
 #tarifs{
-  background-image: url('#{$chemin_images}guitar3.jpg');
+  background-image: url('#{$chemin_images}bg-tarifs.jpg');
   background-repeat:no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -208,7 +208,7 @@ section h1 {
 }
 
 #reservation{
-  background-image: url('#{$chemin_images}guitar4.jpg');
+  background-image: url('#{$chemin_images}bg-reservation.jpg');
   background-repeat:no-repeat;
   background-attachment: fixed;
   background-size: cover;
