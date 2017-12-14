@@ -1,0 +1,84 @@
+.navbar {
+  /*Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+72,000000+100&0.92+96,0+99*/
+  background: -moz-linear-gradient(top, #111312 96%, #111312 96%, transparent 100%, transparent 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #111312 96%, #111312 96%, transparent 100%, transparent 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #111312 96%, #111312 96%, transparent 100%, transparent 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#111312', endColorstr='transparent', GradientType=0); /* IE6-9 */
+  border: none;
+
+}
+
+.navbar-brand .contact  {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  color: #bea06c;
+ margin-left: 3%;
+  line-height: 1.1;
+
+}
+
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .navbar-brand .contact {font-size:14px;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar-brand .contact {font-size:14px;}
+}
+
+
+
+.navbar-brand  {
+  max-height: 154px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  margin-left: 3%;
+}
+
+
+/*mobile*/
+@media only screen and (max-device-width: 720px) {
+  .navbar {background-color: #111312}
+  .navbar-brand { max-height: 87px; width:75%;  margin-left: 0;}
+  .navbar-nav > li > a { font-size: 20px; }
+  .navbar-brand .contact {font-size:22px;}
+}
+
+.navbar-toggle {
+  background-color: #bea06c;
+  margin-top: 5%;
+}
+
+
+#masthead .navbar-nav > li > a {
+
+  color:#e1e3e2;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a{
+    line-height: 109px;
+  }
+}
+#masthead .navbar-nav > li > a:hover, #masthead .navbar-nav > li > a:focus {
+  background:none ;
+  color:#bea06c;
+}
+
+
+
+
+
+// fin navbar

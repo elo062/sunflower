@@ -1,0 +1,484 @@
+/* Reset*/
+
+@import "variables";
+@import "navigation";
+
+//html, body, div, span, applet, object, iframe,
+//h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+//a, abbr, acronym, address, big, cite, code,
+//del, dfn, em, img, ins, kbd, q, s, samp,
+//small, strike, strong, sub, sup, tt, var,
+//b, u, i, center,
+//dl, dt, dd, ol, ul, li,
+//fieldset, form, label, legend,
+//table, caption, tbody, tfoot, thead, tr, th, td,
+//article, aside, canvas, details, embed,
+//figure, figcaption, footer, header, hgroup,
+//menu, nav, output, ruby, section, summary,
+//time, mark, audio, video {
+//  margin: 0;
+//  padding: 0;
+//  border: 0;
+//  font-size: 100%;
+//  font: inherit;
+//  vertical-align: baseline;
+//}
+///* HTML5 display-role reset for older browsers */
+//article, aside, details, figcaption, figure,
+//footer, header, hgroup, menu, nav, section {
+//  display: block;
+//}
+a {
+  text-decoration: none;
+  color: #ffbf00;
+}
+//
+//html {
+//  height: 100%;
+//  box-sizing: border-box;
+//}
+//
+//body {
+//  /*line-height: 1;*/
+//  font-family: 'Comfortaa', cursive;
+//  position: relative;
+//  margin: 0;
+//  padding-bottom: 6rem;
+//  min-height: 100%;
+//}
+//
+//blockquote, q {
+//  quotes: none;
+//}
+//blockquote:before, blockquote:after,
+//q:before, q:after {
+//  content: '';
+//  content: none;
+//}
+//table {
+//  border-collapse: collapse;
+//  border-spacing: 0;
+//}
+//
+///* Fin du Reset*/
+
+/* Définition des polices personnalisées */
+
+@font-face
+{
+  font-family: 'Poiret One', cursive;
+  font-family: 'Comfortaa', cursive;
+}
+
+///*== Menu horizontal ==*/
+//.navbar-header {
+//  background: rgba(000, 000, 000, 0.7);
+//  position:fixed;
+//  top:0;
+//  right:0;
+//  left:0;
+//
+//}
+//.navbar-header  {
+//  width:100%;
+//  max-width:1280px;
+//  margin:auto;
+//  padding:0;
+//  text-align:center;
+//  display: flex;
+//  justify-content: space-around;
+//  align-items: center;
+//  font-family: 'Comfortaa', cursive;
+//}
+//.navbar-header .op-v-item {
+//  list-style:none;
+//  display:table-cell;
+//  font-size:18px;
+//}
+//.navbar-brand{
+//  display: flex;
+//  align-self: center;
+//  align-items: flex-start;
+//  justify-content: space-between;
+//}
+//.navbar{
+//  margin-bottom: 0;
+//}
+//.navbar-header .contact {
+//  font-family: 'Poiret One', cursive;
+//  font-size: 18px;
+//  font-weight: bold;
+//  //display: flex;
+//  //flex-direction: column;
+//}
+//.navbar-header .contact span:first-child{
+//  color: #f7edd6;
+//}
+//.navbar-header  span{
+//  display: block;
+//  color: #fc8704;
+//}
+//.navbar-header  span i{
+//  margin-right: 6px;
+//}
+//.navbar-header  span i.fa.fa-phone{
+//  font-size: 15px;
+//}
+//.navbar-header  .op-v-link {
+//  color:#fff;
+//  padding:16px 8px;
+//  font-style: normal;
+//  display:block;
+//  text-decoration:none;
+//}
+//.navbar-header  .op-v-link:hover, .navbar-header .op-v-link.active {
+//  background-color:#fff;
+//  color:#171717
+//}
+//
+
+
+/*== Sections ==*/
+section h1 {
+  padding:450px;
+  text-align:center;
+  color:white;
+  margin:0;
+}
+
+/*on différencie la couleur 1 section sur 2*/
+
+#accueil{
+  background-image: url('https://j.gifs.com/vo26nm.gif');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+#presentation{
+  background-image: url('#{$chemin_images}music.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+#presentation div{
+  color: white;
+  background-color: rgba(000, 000, 000, 0.7);
+  margin: auto;
+  text-align: justify;
+  width: 70%;
+  padding: 5%;
+  font-size: 1.1em;
+}
+
+#presentation div p, ul{
+  margin: 2%;
+  padding: 0px 50px;
+}
+
+#presentation div h2{
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+#demo{
+  background-image: url('#{$chemin_images}guitar6.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#tarifs{
+  background-image: url('#{$chemin_images}guitar3.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+#reservation{
+  background-image: url('#{$chemin_images}guitar4.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+}
+
+///* Boutique */
+//
+//.boutique{
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-around;
+//  flex-wrap: wrap;
+//  align-items: center;
+//}
+//
+//.album{
+//  display: flex;
+//  flex-direction: column;
+//}
+//
+//.texte{
+//  margin: 12% 0 5% 0;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//  flex-direction: column;
+//}
+//
+//.texte p{
+//  margin: 1%;
+//  display: flex;
+//  justify-content: center;
+//}
+//
+//.texte h1{
+//  margin-top: 50px;
+//  font-size: 1.3em;
+//  font-weight: bold;
+//}
+//
+//img{
+//  max-width: 350px;
+//}
+//
+///*Formulaire d'inscription*/
+//
+//
+//form h1{
+//  font-size: 38px;
+//  font-weight: bold;
+//  margin: 3%;
+//  text-align: center;
+//  font-family: 'Poiret One', cursive;
+//}
+//
+//.formulaire{
+//  margin: 10% 0;
+//}
+//
+//.formulaire p{
+//  margin: 15px 0;
+//  display: flex;
+//  justify-content: space-between;
+//  width: 500px;
+//}
+//
+//.reservations{
+//  margin: 25px 0px;
+//  display: flex;
+//  justify-content: center;
+//}
+//
+//
+//
+//.button{
+//  margin: 12% 0% 3% 0%;
+//  padding: 5px;
+//  border-radius: 8px;
+//  font-family: 'Poiret One', cursive;
+//  font-weight: bold;
+//  font-size: 1.3em;
+//  background-color: #ffbf00;
+//  cursor: pointer;
+//}
+//
+//.button:hover{
+//  background-color: yellow;
+//  color: black;
+//}
+//
+//.button a{
+//  margin: 12% 0% 3% 0%;
+//  padding: 5px;
+//  border-radius: 8px;
+//  font-family: 'Poiret One', cursive;
+//  font-weight: bold;
+//  font-size: 1em;
+//  background-color: #ffbf00;
+//  cursor: pointer;
+//  color:dimgrey;
+//}
+//
+//.button a:hover{
+//  background-color: yellow;
+//  color: black;
+//}
+//
+//#erreur{
+//  display: none;
+//}
+//
+//.false{
+//  margin: 5% 0 0 20%;
+//  color: red;
+//  font-size: 18px;
+//}
+//
+///*Bouton haut*/
+//
+//.scrollToTop{
+//  display: none; /* Hidden by default */
+//  position: fixed; /* Fixed/sticky position */
+//  bottom: 30px; /* Place the button at the bottom of the page */
+//  right: 20px; /* Place the button 30px from the right */
+//  z-index: 99; /* Make sure it does not overlap */
+//  border: none; /* Remove borders */
+//  outline: none; /* Remove outline */
+//  height: 50px;
+//  width: auto;
+//  cursor: pointer; /* Add a mouse pointer on hover */
+//  padding: 15px; /* Some padding */
+//  border-radius: 10px; /* Rounded corners */
+//}
+//
+///* Footer */
+//
+//footer{
+//  height: 120px;
+//  background-image: url('#{$chemin_images}guitar9.jpg');
+//  background-repeat:no-repeat;
+//  background-attachment: fixed;
+//  background-size: cover;
+//  background-position: bottom;
+//  font-family: 'Poiret One', cursive;
+//  display: flex;
+//  justify-content: space-around;
+//  align-items: center;
+//  flex-direction: column;
+//  position: absolute;
+//  right: 0;
+//  bottom: 0;
+//  left: 0;
+//  /*padding: 1rem;*/
+//}
+//
+//.footer{
+//  display: flex;
+//  justify-content: space-around;
+//  width: 450px;
+//  font-size: 1.4em;
+//  font-weight: bolder;
+//}
+//
+//.footer a {
+//  color: black;
+//}
+//
+//.footer a:hover{
+//  color: #ffbf00;
+//  text-shadow:  1px 1px black;
+//}
+//
+//.rs ul
+//{
+//  list-style-type: none;
+//  display: flex;
+//  justify-content: space-around;
+//  width: 200px;
+//}
+//
+//.rs a{
+//  color: black;
+//}
+//.rs a:hover{
+//  color: #ffbf00;
+//  text-shadow:  1px 1px black;
+//}
+//.menuSandwich{
+//  display: none;
+//  position: fixed;
+//  z-index: 1000;
+//  width: 100px;
+//  margin: 20px 20px;
+//}
+//
+//
+///*Responsive tablette*/
+//@media screen and (max-width: 900){
+//  .footer{
+//    max-width: 80%;
+//    font-size: 1.3em;
+//  }
+//  .menuSandwich{
+//    position: fixed;
+//    z-index: 1000;
+//    width: 130px;
+//    margin: 20px 20px;
+//  }
+//}
+//
+///*Responsive smartphone*/
+//@media screen and (max-width: 480px){
+//  .menuSandwich{
+//    position: fixed;
+//    z-index: 1000;
+//    margin: 10px;
+//  }
+//  #logo{
+//    display: none;
+//  }
+//  .navbar-header .op-sectionlist {
+//    flex-direction: column;
+//  }
+//  #presentation div{
+//    width: 65%;
+//    text-align: initial;
+//    font-size: 1em;
+//  }
+//  #presentation div h2{
+//    font-size: 1.2em;
+//  }
+//  #presentation div p, ul{
+//    margin: 2%;
+//    padding: 0px;
+//  }
+//  .menuSandwich{
+//    margin: 3px 0px;
+//  }
+//  .scrollToTop{
+//    bottom: 17px;
+//    right: 10px;
+//    padding: 0;
+//  }
+//  .video{
+//    max-width: 350px;
+//  }
+//  .texte{
+//    margin-top: 30%;
+//  }
+//  .texte h1{
+//    font-size: 1.5em;
+//    font-weight: bold;
+//  }
+//  form{
+//    max-width: 100%;
+//  }
+//  .formulaire p{
+//    max-width: 100%;
+//    font-size: 1.1em;
+//    margin: 3% 0%;
+//  }
+//  footer{
+//    height: 130px;
+//  }
+//  .footer{
+//    max-width: 80%;
+//    font-size: 1.2em;
+//  }
+//  .rs {
+//    font-size: 1.1em;
+//  }
+//}

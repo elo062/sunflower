@@ -1,0 +1,49 @@
+{#Ceci est le gabarit de mes pages#}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sunflower</title>
+    <link rel="icon" href="{{ chemin_images }}sunflower-logo.ico">
+    <link rel="stylesheet" href="{{ chemin_vendor }}bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ chemin_vendor }}bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ chemin_vendor }}font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="{{ chemin_css }}style.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Poiret+One" rel="stylesheet">
+</head>
+<body>
+{#J'inclus le menu#}
+{% include 'navigation.html.twig' %}
+{#Ci-dessous le body#}
+{% block content %}
+{% endblock %}
+<footer>
+
+    <div class="rs">
+        <ul>
+            <li><a href="#" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i></a></li>
+            <li><a href="#" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer">
+        <p><a href="#">Mentions Légales</a></p>
+        <p>|</p>
+        <p><a href="#">Contact</a></p>
+        <p>|</p>
+        <p><a href="#">Plan du site</a></p>
+        <a href="#"><img src="{{ chemin_images }}arrow.png" alt="arrow" title="arrow" class="scrollToTop"></a>
+    </div>
+
+</footer>
+<script src="{{ chemin_vendor }}jquery-3.2.1.min.js"></script>
+<script src="{{ chemin_vendor }}bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ chemin_js }}app.js"></script>
+<script src="{{ chemin_js }}login.js"></script>
+<script src="{{ chemin_js }}gotToTop.js"></script>
+<script src="{{ chemin_js }}scrollTo.js"></script>
+</body>
+</html>
+

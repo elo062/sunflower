@@ -1,15 +1,5 @@
 /* ====== Add Smooth effect ===== */
 $(function() {
-  // On fait apparaître le menu sandwich et disparaitre la barre de navigation sur petit écran
-        var windowWidth= $(window).width();
-        if(windowWidth < 600){
-          $(".op-sectionlist").hide();
-          $(".menuSandwich").show();
-        }
-        // On fait disparaître le menu sandwich sur grand écran
-      if(windowWidth > 600){
-        $(".menuSandwich").hide();
-      }
 
   // var scrollToAnchor = function( id ) {
   //   var elem = $("section[id='"+ id +"']"); // on crée une balise d'ancrage
