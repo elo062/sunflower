@@ -86,7 +86,6 @@ section h1 {
   color: white;
   margin: 0; }
 
-/*on diff├®rencie la couleur 1 section sur 2*/
 #accueil {
   background-image: url("https://j.gifs.com/vo26nm.gif");
   background-repeat: no-repeat;
@@ -101,31 +100,32 @@ section h1 {
   background-size: cover;
   background-position: center center; }
 
-#presentation div {
+#presentation .container {
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
-  margin: auto;
   text-align: justify;
-  width: 70%;
-  padding: 5%;
-  font-size: 1.1em; }
-
-#presentation div p, ul {
-  margin: 2%;
-  padding: 0px 50px; }
+  padding: 5% 0;
+  font-size: 1.3em;
+  font-family: 'Comfortaa'; }
 
 #presentation div h2 {
   font-family: 'Poiret One', cursive;
   font-weight: bold;
-  font-size: 1.3em;
-  margin-bottom: 5%; }
+  font-size: 1.5em;
+  margin-bottom: 5%;
+  text-align: center; }
+
+#presentation h3 {
+  margin: 5% 0;
+  text-align: justify; }
 
 #demo {
   background-image: url("../img/bg-demo.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center center; }
+  background-position: center center;
+  align-items: center; }
 
 #tarifs {
   background-image: url("../img/bg-tarifs.jpg");
