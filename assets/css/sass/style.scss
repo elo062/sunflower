@@ -192,10 +192,10 @@ section h1 {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: flex-start;
+  //align-items: center;
 }
 
 #tarifs{
@@ -405,79 +405,85 @@ section h1 {
 //}
 //
 //
-///*Responsive tablette*/
-//@media screen and (max-width: 900){
-//  .footer{
-//    max-width: 80%;
-//    font-size: 1.3em;
-//  }
-//  .menuSandwich{
-//    position: fixed;
-//    z-index: 1000;
-//    width: 130px;
-//    margin: 20px 20px;
-//  }
-//}
+/*Responsive tablette*/
+@media screen and (max-width: 900px){
+  #demo iframe{
+    width: 100%;
+  }
+  //.footer{
+  //  max-width: 80%;
+  //  font-size: 1.3em;
+  //}
+  //.menuSandwich{
+  //  position: fixed;
+  //  z-index: 1000;
+  //  width: 130px;
+  //  margin: 20px 20px;
+  //}
+}
 //
-///*Responsive smartphone*/
-//@media screen and (max-width: 480px){
-//  .menuSandwich{
-//    position: fixed;
-//    z-index: 1000;
-//    margin: 10px;
-//  }
-//  #logo{
-//    display: none;
-//  }
-//  .navbar-header .op-sectionlist {
-//    flex-direction: column;
-//  }
-//  #presentation div{
-//    width: 65%;
-//    text-align: initial;
-//    font-size: 1em;
-//  }
-//  #presentation div h2{
-//    font-size: 1.2em;
-//  }
-//  #presentation div p, ul{
-//    margin: 2%;
-//    padding: 0px;
-//  }
-//  .menuSandwich{
-//    margin: 3px 0px;
-//  }
-//  .scrollToTop{
-//    bottom: 17px;
-//    right: 10px;
-//    padding: 0;
-//  }
-//  .video{
-//    max-width: 350px;
-//  }
-//  .texte{
-//    margin-top: 30%;
-//  }
-//  .texte h1{
-//    font-size: 1.5em;
-//    font-weight: bold;
-//  }
-//  form{
-//    max-width: 100%;
-//  }
-//  .formulaire p{
-//    max-width: 100%;
-//    font-size: 1.1em;
-//    margin: 3% 0%;
-//  }
-//  footer{
-//    height: 130px;
-//  }
-//  .footer{
-//    max-width: 80%;
-//    font-size: 1.2em;
-//  }
-//  .rs {
-//    font-size: 1.1em;
-//  }
-//}
+/*Responsive smartphone*/
+@media screen and (max-width: 480px){
+  #demo iframe{
+    width: 100%;
+  }
+  //.menuSandwich{
+  //  position: fixed;
+  //  z-index: 1000;
+  //  margin: 10px;
+  //}
+  //#logo{
+  //  display: none;
+  //}
+  //.navbar-header .op-sectionlist {
+  //  flex-direction: column;
+  //}
+  //#presentation div{
+  //  width: 65%;
+  //  text-align: initial;
+  //  font-size: 1em;
+  //}
+  //#presentation div h2{
+  //  font-size: 1.2em;
+  //}
+  //#presentation div p, ul{
+  //  margin: 2%;
+  //  padding: 0px;
+  //}
+  //.menuSandwich{
+  //  margin: 3px 0px;
+  //}
+  //.scrollToTop{
+  //  bottom: 17px;
+  //  right: 10px;
+  //  padding: 0;
+  //}
+  //.video{
+  //  max-width: 350px;
+  //}
+  //.texte{
+  //  margin-top: 30%;
+  //}
+  //.texte h1{
+  //  font-size: 1.5em;
+  //  font-weight: bold;
+  //}
+  //form{
+  //  max-width: 100%;
+  //}
+  //.formulaire p{
+  //  max-width: 100%;
+  //  font-size: 1.1em;
+  //  margin: 3% 0%;
+  //}
+  //footer{
+  //  height: 130px;
+  //}
+  //.footer{
+  //  max-width: 80%;
+  //  font-size: 1.2em;
+  //}
+  //.rs {
+  //  font-size: 1.1em;
+  //}
+}

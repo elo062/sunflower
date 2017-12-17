@@ -125,11 +125,7 @@ section h1 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; }
+  background-position: center center; }
 
 #tarifs {
   background-image: url("../img/bg-tarifs.jpg");
@@ -144,5 +140,14 @@ section h1 {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center; }
+
+/*Responsive tablette*/
+@media screen and (max-width: 900px) {
+  #demo iframe {
+    width: 100%; } }
+/*Responsive smartphone*/
+@media screen and (max-width: 480px) {
+  #demo iframe {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
