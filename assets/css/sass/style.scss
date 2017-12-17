@@ -38,14 +38,14 @@ a {
 //  box-sizing: border-box;
 //}
 //
-//body {
-//  /*line-height: 1;*/
-//  font-family: 'Comfortaa', cursive;
-//  position: relative;
-//  margin: 0;
-//  padding-bottom: 6rem;
-//  min-height: 100%;
-//}
+body {
+  /*line-height: 1;*/
+  font-family: 'Comfortaa', cursive;
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+}
 //
 //blockquote, q {
 //  quotes: none;
@@ -71,71 +71,7 @@ a {
 }
 
 ///*== Menu horizontal ==*/
-//.navbar-header {
-//  background: rgba(000, 000, 000, 0.7);
-//  position:fixed;
-//  top:0;
-//  right:0;
-//  left:0;
-//
-//}
-//.navbar-header  {
-//  width:100%;
-//  max-width:1280px;
-//  margin:auto;
-//  padding:0;
-//  text-align:center;
-//  display: flex;
-//  justify-content: space-around;
-//  align-items: center;
-//  font-family: 'Comfortaa', cursive;
-//}
-//.navbar-header .rubrique {
-//  list-style:none;
-//  display:table-cell;
-//  font-size:18px;
-//}
-//.navbar-brand{
-//  display: flex;
-//  align-self: center;
-//  align-items: flex-start;
-//  justify-content: space-between;
-//}
-//.navbar{
-//  margin-bottom: 0;
-//}
-//.navbar-header .contact {
-//  font-family: 'Poiret One', cursive;
-//  font-size: 18px;
-//  font-weight: bold;
-//  //display: flex;
-//  //flex-direction: column;
-//}
-//.navbar-header .contact span:first-child{
-//  color: #f7edd6;
-//}
-//.navbar-header  span{
-//  display: block;
-//  color: #fc8704;
-//}
-//.navbar-header  span i{
-//  margin-right: 6px;
-//}
-//.navbar-header  span i.fa.fa-phone{
-//  font-size: 15px;
-//}
-//.navbar-header  .lien-rubrique {
-//  color:#fff;
-//  padding:16px 8px;
-//  font-style: normal;
-//  display:block;
-//  text-decoration:none;
-//}
-//.navbar-header  .lien-rubrique:hover, .navbar-header .lien-rubrique.active {
-//  background-color:#fff;
-//  color:#171717
-//}
-//
+
 
 
 /*== Sections ==*/
