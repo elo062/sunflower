@@ -79,10 +79,10 @@ function create($tabDonnees)
                       )");
 
 //    $key = la clé = l'index du tableau à laquelle on assigne une valeur ($value)
-    var_dump($tabDonnees);
+
     foreach ($tabDonnees as $key => $value){
 
-         $stmt->bindParam(":$key", $value);
+         $stmt->bindValue($key, $value);
 
     }
 
@@ -103,9 +103,7 @@ function create($tabDonnees)
 //    $stmt->bindParam(':id_utilisateur', $tabDonnees['id_utilisateur']);
 ////  On exécute la requête
     $stmt->execute();
-    echo "\nPDOStatement::errorInfo():\n";
-    $arr = $stmt->errorInfo();
-    print_r($arr);
+
 }
 /* Function modifier;
  -- 11. Modifier la réservation qui l'id récupéreé en changeant publie à 1
