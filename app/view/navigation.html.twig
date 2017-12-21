@@ -1,6 +1,6 @@
 <header id="masthead" class="site-header navbar navbar-fixed-top" role="banner">
 
-    <div class="container">
+    <div class="container-fluid">
 
 
         <div class="navbar-header">
@@ -10,10 +10,10 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <div class="navbar-brand">
-                <img src="{{ chemin_images }}sunflower-logo1.png" alt="logo sunflower" title="logo sunflower" id="logo" class="img-responsive">
-
-                <div class="contact">
+            <div class="logo">
+                <img src="{{ chemin_images }}sunflower-logo1.png" alt="logo sunflower" title="Accueil" id="logo" class="img-responsive">
+            </div>
+            <div class="contact">
                     <span>SUNFLOWER </span>
                     <span>
                     <a href="tel: 06 10 93 37 46">
@@ -21,25 +21,26 @@
                     </a>
                     </span>
                     <span><a href="mailto:contact@sunflower.com"><i class="fa fa-envelope" aria-hidden="true"></i>Envoyer un mail</a></span>
-                </div>
-
             </div>
 
         </div>
-        <collapse class="collapse navbar-collapse navbar-right" id="menu_principal"   role="navigation" >
 
+        <nav class="collapse navbar-collapse navbar-right" role="navigation">
 
-            <ul id="menu-main-nav" class="nav navbar-nav" >
+            <ul id="menu-main-nav" class="nav navbar-nav navbar-right" >
                 <li class="rubrique"><a class="lien-rubrique" href="index.php#accueil">ACCUEIL</a></li>
                 <li class="rubrique"><a class="lien-rubrique" href="index.php#presentation">PRÉSENTATION</a></li>
                 <li class="rubrique"><a class="lien-rubrique" href="index.php#demo">DÉMO</a></li>
                 <li class="rubrique"><a class="lien-rubrique" href="index.php#tarifs">TARIFS</a></li>
-                <li class="rubrique"><a class="lien-rubrique" href="index.php#reservation">DEMANDE DE
-                        RÉSERVATION</a>
+                <li class="rubrique"><a class="lien-rubrique" href="index.php#reservation">DEMANDE DE RÉSERVATION</a>
                 </li>
                 <li class="rubrique"><a class="lien-rubrique" href="index.php#connexion">ME CONNECTER</a></li>
             </ul>
 
-        </collapse>
+        </nav>
+
+
     </div>
+
+
 </header>

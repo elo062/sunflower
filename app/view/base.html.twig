@@ -21,23 +21,25 @@
 {% block content %}
 {% endblock %}
 <footer>
-
-    <div class="rs">
-        <ul>
-            <li><a href="#" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i></a></li>
-            <li><a href="#" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
-        </ul>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-offset-10 col-xs-2>
+                <a href="#"><img src="{{ chemin_images }}arrow.png" alt="arrow" title="arrow" class="scrollToTop"></a>
+            </div>
+        </div>
+            <div class="text-center center-block">
+                <a href="#"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="#"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+                <a href="#"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+                <a href="mailto:eloisemecozzi@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+            </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-2 col-lg-10 col-lg-offset-1">
+                <a href="#">Mentions Légales</a> |
+                <a href="#">Plan du site</a>
+            </div>
+        </div>
     </div>
-    <div class="footer">
-        <p><a href="#">Mentions Légales</a></p>
-        <p>|</p>
-        <p><a href="#">Contact</a></p>
-        <p>|</p>
-        <p><a href="#">Plan du site</a></p>
-        <a href="#"><img src="{{ chemin_images }}arrow.png" alt="arrow" title="arrow" class="scrollToTop"></a>
-    </div>
-
 </footer>
 <script src="{{ chemin_vendor }}jquery-3.2.1.min.js"></script>
 <script src="{{ chemin_vendor }}bootstrap/js/bootstrap.min.js"></script>
