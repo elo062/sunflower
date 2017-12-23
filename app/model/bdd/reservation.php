@@ -41,50 +41,68 @@ function create($tabDonnees)
         echo 'Connexion échouée : ' . $e->getMessage();
     }
 
+//    On récupère tous les index du tableau $tabDonnees dans une chaîne pour éviter de créer une variable pour chaque colonne et de tester les champs non obligatoires un par un.(ex : le prospect ne va pas inserrer une photo de l'évènement).
 
-    // on créé une variable contenant la liste des champs obligatoires
-  $fields = "date_reservation,ville,code_postal,description,id_utilisateur";
+ /*   Ex :
 
-//    if (isset) vérifie si une variable est définie et n'est pas nulle
+  $lstColonne = " date_reservation,
+                        ville,
+                        code_postal,
+                        description,
+
+                        id_utilisateur";
+
+    if (isset) vérifie si une variable est définie et n'est pas nulle
 
     if (isset($tabDonnees["publie"])) {
-        $fields = $fields.",publie";
+        $lstColonne = $lstColonne.", publie";
     }
     if (isset($tabDonnees["valide"])) {
-        $fields = $fields.",valide";
+        $lstColonne = $lstColonne.", valide";
     }
     if (isset($tabDonnees["photo_couverture"])) {
-        $fields = $fields.",photo_couverture";
-    }
+        $lstColonne = $lstColonne.", photo_couverture";
+    }*/
 
-    // on remplace dans la chaine des champs les virgules par ,: pour avoir la liste des paramètres pour la requête préparées
-    $parameters = ":".str_replace(',', ',:', $fields);
-
-
+//La fonction array_keys permet de récupérer tous les index du tableau $tabDonnees et de recréer un tableau $tabParameters à partir de ces index. (c'est comme si on parcourait le tableau pourrécupérer les index pour le rajouter dans un nouveau tableau).
+    $tabParameters = array_keys($tabDonnees);
+    //La fonction implode permet de transformer ce nouveau tableau en chaîne de caractères.
+    $lstColonnes = implode(",", $tabParameters);
+    $lstParameters = ":" . str_replace(",",", :", $lstColonnes);
 
 //    On prépare la requête pour la sécuriser
     $stmt = $bdd->prepare(
         "INSERT INTO reservation (
-                       $fields
+                       $lstColonnes
                     ) VALUES (
-                        $parameters
+                         $lstParameters
                       )");
 
 //    $key = la clé = l'index du tableau à laquelle on assigne une valeur ($value)
 
     foreach ($tabDonnees as $key => $value){
 
-        // si la valeur est bien saisie
-        if(isset($value)) {
-            $stmt->bindValue($key, $value);
-        }
-
+         $stmt->bindValue($key, $value);
 
     }
 
-
-////  On exécute la requête et retourne true ou false si la requête s'est bien exécutée
-    return $stmt->execute();
+//    $stmt->bindParam(':date_reservation', $tabDonnees['date_reservation']);
+//    $stmt->bindParam(':ville', $tabDonnees['ville']);
+//    $stmt->bindParam(':code_postal', $tabDonnees['code_postal']);
+//    $stmt->bindParam(':description', $tabDonnees['description']);
+//    if (isset($tabDonnees['valide'])) {
+//        $stmt->bindParam(':valide', $tabDonnees['valide']);
+//    }
+//    if (isset($tabDonnees['publie'])) {
+//        $stmt->bindParam(':publie', $tabDonnees['publie']);
+//    }
+//    if (isset($tabDonnees['photo_couverture'])) {
+//        $stmt->bindParam(':photo_couverture', $tabDonnees['photo_couverture']);
+//    }
+//
+//    $stmt->bindParam(':id_utilisateur', $tabDonnees['id_utilisateur']);
+////  On exécute la requête
+    $stmt->execute();
 
 }
 /* Function modifier;
