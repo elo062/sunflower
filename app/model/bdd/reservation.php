@@ -82,7 +82,7 @@ function create($tabDonnees)
 
     foreach ($tabDonnees as $key => $value){
 
-         $stmt->bindValue($key, $value);
+         $stmt->bindParam($key, $value);
 
     }
 
@@ -134,8 +134,5 @@ WHERE r.id_prospect = 1;
  FROM reservation AS r INNER JOIN utilisateur AS u
  ON r.id_utilisateur = u.id
  WHERE u.email = 'prospect2@gmail.com';
-
-
-
 
  */

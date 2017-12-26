@@ -1,2 +1,3 @@
 connexion.php
 vendor/Twig/*
+.idea/*
