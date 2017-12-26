@@ -33,7 +33,7 @@ function create($tabDonnees)
 
     $dsn = 'mysql:host=localhost;dbname=sunflower';
     $user = 'root';
-    $password = 'root';
+    $password = '';
 
     try {
         $bdd = new PDO($dsn, $user, $password);
@@ -68,7 +68,7 @@ function create($tabDonnees)
     $tabParameters = array_keys($tabDonnees);
     //La fonction implode permet de transformer ce nouveau tableau en chaîne de caractères.
     $lstColonnes = implode(",", $tabParameters);
-    $lstParameters = ":" . implode(", :", $tabParameters);
+    $lstParameters = ":" . str_replace(",",", :", $lstColonnes);
 
 //    On prépare la requête pour la sécuriser
     $stmt = $bdd->prepare(
