@@ -28,83 +28,126 @@ dans la fonction create de reservation.php :
  INSERT INTO reservation (date_reservation, ville, code_postal, description, valide, id_utilisateur)
  VALUES('2017-12-09','Narbonne', 11100, 'blabla', 1, 1);*/
 
+// On créé la fonction pour ajouter/créer une réservation
 function create($tabDonnees)
 {
+    $bdd = getConnection();
+    $fields = "date_reservation, ville, code_postal, description, id_utilisateur";
 
-    $dsn = 'mysql:host=localhost;dbname=sunflower';
-    $user = 'root';
-    $password = '';
-
-    try {
-        $bdd = new PDO($dsn, $user, $password);
-    } catch (PDOException $e) {
-        echo 'Connexion échouée : ' . $e->getMessage();
+// On teste si publie a été rempli et si oui on l'ajoute dans les champs à insérer
+    if (isset($tabDonnees['publie'])) {
+        $fields .= ', publie';
+        // équivalent : $fields = $fields . ', publie';
+    }
+    if (isset($tabDonnees['valide'])) {
+        $fields .= ' , valide';
+    }
+    if (isset($tabDonnees['photo_couverture'])) {
+        $fields .= ' , photo_couverture';
     }
 
-//    On récupère tous les index du tableau $tabDonnees dans une chaîne pour éviter de créer une variable pour chaque colonne et de tester les champs non obligatoires un par un.(ex : le prospect ne va pas inserrer une photo de l'évènement).
+    // on prend les mêmes champs que pour fields et on ajoute ":" avant chaque champ pour éviter de répéter le code
+    $params = ':' .str_replace(', ',', :', $fields);
 
- /*   Ex :
+// $requete contient la chaîne de la requête à préparer
+    $requete = "INSERT INTO reservation ($fields)
+ VALUES($params)";
+// On prépare la requête
+    // On est obligé d'utiliser une variable prepare pour utiliser bindParam (qui remplace les :champs par la valeur du tableau passée en paramètre)
+    $prepare = $bdd ->prepare($requete);
+     bindParamReservation($prepare, $tabDonnees);
 
-  $lstColonne = " date_reservation,
-                        ville,
-                        code_postal,
-                        description,
-
-                        id_utilisateur";
-
-    if (isset) vérifie si une variable est définie et n'est pas nulle
-
-    if (isset($tabDonnees["publie"])) {
-        $lstColonne = $lstColonne.", publie";
-    }
-    if (isset($tabDonnees["valide"])) {
-        $lstColonne = $lstColonne.", valide";
-    }
-    if (isset($tabDonnees["photo_couverture"])) {
-        $lstColonne = $lstColonne.", photo_couverture";
-    }*/
-
-//La fonction array_keys permet de récupérer tous les index du tableau $tabDonnees et de recréer un tableau $tabParameters à partir de ces index. (c'est comme si on parcourait le tableau pourrécupérer les index pour le rajouter dans un nouveau tableau).
-    $tabParameters = array_keys($tabDonnees);
-    //La fonction implode permet de transformer ce nouveau tableau en chaîne de caractères.
-    $lstColonnes = implode(",", $tabParameters);
-    $lstParameters = ":" . str_replace(",",", :", $lstColonnes);
-
-//    On prépare la requête pour la sécuriser
-    $stmt = $bdd->prepare(
-        "INSERT INTO reservation (
-                       $lstColonnes
-                    ) VALUES (
-                         $lstParameters
-                      )");
-
-//    $key = la clé = l'index du tableau à laquelle on assigne une valeur ($value)
-
-    foreach ($tabDonnees as $key => $value){
-
-         $stmt->bindValue($key, $value);
-
-    }
-
-//    $stmt->bindParam(':date_reservation', $tabDonnees['date_reservation']);
-//    $stmt->bindParam(':ville', $tabDonnees['ville']);
-//    $stmt->bindParam(':code_postal', $tabDonnees['code_postal']);
-//    $stmt->bindParam(':description', $tabDonnees['description']);
-//    if (isset($tabDonnees['valide'])) {
-//        $stmt->bindParam(':valide', $tabDonnees['valide']);
-//    }
-//    if (isset($tabDonnees['publie'])) {
-//        $stmt->bindParam(':publie', $tabDonnees['publie']);
-//    }
-//    if (isset($tabDonnees['photo_couverture'])) {
-//        $stmt->bindParam(':photo_couverture', $tabDonnees['photo_couverture']);
-//    }
-//
-//    $stmt->bindParam(':id_utilisateur', $tabDonnees['id_utilisateur']);
-////  On exécute la requête
-    $stmt->execute();
-
+    // On exécute la requête)
+    $prepare->execute();
 }
+
+// On créé la fonction pour modifier une réservation
+function update($tabDonnees){
+    $bdd = getConnection();
+    $requete = "UPDATE reservation SET date_reservation = :date_reservation, ville = :ville, code_postal = :code_postal, description = :description, id_utilisateur = :id_utilisateur";
+    if(isset($tabDonnees['publie'])){
+        $requete = $requete . ', publie = :publie';
+    }
+    if(isset($tabDonnees['valide'])){
+        $requete = $requete . ', valide = :valide';
+    }
+    if(isset($tabDonnees['photo_couverture'])){
+        $requete = $requete . ', photo_couverture = :photo_couverture';
+    }
+
+    $requete = $requete . " WHERE id = :id";
+    $prepare = $bdd->prepare($requete);
+    // A l'appel de la fonction on n'a pas à créer une variable pour récupérer la valeur (voir explication en-dessous)
+    bindParamReservation($prepare, $tabDonnees);
+    $prepare->execute();
+}
+// En mettant un paramètre par référence (= "&" devant le paramètre) on n'a pas à mettre de return à la fin de la fonction et à l'appel de la fonction on n'a pas à créer une variable pour récupérer la valeur => sa portée est équivalente à celle d'une variable globale = qd on a besoin d'un paramètre, qu'on le modifie et qu'on a besoin de le retourner
+function bindParamReservation(&$prepare, $tabDonnees){
+
+    $prepare->bindParam(':date_reservation', $tabDonnees['date_reservation']);
+    $prepare->bindParam(':ville', $tabDonnees['ville'], PDO::PARAM_STR );
+    $prepare->bindParam(':code_postal', $tabDonnees['code_postal'], PDO::PARAM_INT);
+    $prepare->bindParam(':description', $tabDonnees['description'], PDO::PARAM_STR);
+    $prepare->bindParam(':id_utilisateur', $tabDonnees['id_utilisateur'], PDO::PARAM_INT);
+    if(isset($tabDonnees['id'])){
+        $prepare->bindParam(':id', $tabDonnees['id'], PDO::PARAM_INT);
+    }
+
+    // On remplace la variable uniquement si on la remplit dans le tableau (sinon erreur)
+    if(isset($tabDonnees['publie'])){
+        $prepare->bindParam(':publie', $tabDonnees['publie'], PDO::PARAM_BOOL);
+    }
+    if(isset($tabDonnees['valide'])){
+        $prepare->bindParam(':valide', $tabDonnees['valide'], PDO::PARAM_BOOL);
+    }
+    if(isset($tabDonnees['photo_couverture'])){
+        $prepare->bindParam(':photo_couverture', $tabDonnees['photo_couverture'], PDO::PARAM_STR);
+    }
+}
+
+// On crée les fonctions qui affichent les réservations par id de réservation, d'utilisateur, et toutes les réservations
+
+function findAll()
+{
+    $bdd = getConnection();
+    $requete = "SELECT * FROM reservation";
+    // On a besoin de PDO::FETCH_ASSOC pour obtenir dans chaque ligne de résultat le nom des colonnes (ville, description, etc) => tableau à double dimension
+    $reservations = $bdd->query($requete)->fetchAll(PDO::FETCH_ASSOC);
+    return $reservations;
+}
+
+function findAllDate() {
+    $bdd = getConnection();
+    // L'instruction DISTINCT permet de supprimer les doublons dans le SELECT : ça permet d'afficher une seule fois une donnée qui se répète dans une table
+    $requete = "SELECT DISTINCT date_reservation FROM reservation";
+    // On a besoin de PDO::FETCH_COLUMN pour obtenir juste les dates (pas besoin de double dimension)
+    $reservations = $bdd->query($requete)->fetchAll(PDO::FETCH_COLUMN);
+    return $reservations;
+}
+
+// On renvoit un et un seul enregistrement dans un tableau car l'id est unique
+function findById($id){
+    $bdd = getConnection();
+    $requete = "SELECT * FROM reservation WHERE id = :id";
+    $prepare = $bdd->prepare($requete);
+    $prepare->bindParam(':id', $id);
+    $prepare->execute();
+  $uneResa=  $prepare->fetch(PDO::FETCH_ASSOC);
+    return $uneResa;
+}
+
+
+// On cherche toutes les résa d'un utilisateur
+function findByIdUtilisateur($id_utilisateur){
+    $bdd = getConnection();
+    $requete = "SELECT * FROM reservation WHERE id_utilisateur = :id_utilisateur";
+    $prepare = $bdd->prepare($requete);
+    $prepare->bindParam(':id_utilisateur', $id_utilisateur);
+    $prepare->execute();
+    $desResa = $prepare->fetchAll(PDO::FETCH_ASSOC);
+    return $desResa;
+}
+
 /* Function modifier;
  -- 11. Modifier la réservation qui l'id récupéreé en changeant publie à 1
  UPDATE reservation SET publie = 1
@@ -134,8 +177,5 @@ WHERE r.id_prospect = 1;
  FROM reservation AS r INNER JOIN utilisateur AS u
  ON r.id_utilisateur = u.id
  WHERE u.email = 'prospect2@gmail.com';
-
-
-
 
  */
