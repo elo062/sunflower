@@ -15,7 +15,11 @@ echo $tabCouleur[1];
 
 $compteRouge = 0;
 for ($i=0; $i<count($tabCouleur); $i++){
-        $compteRouge+=$tabCouleur[$i]=="rouge";
+//        $compteRouge+=$tabCouleur[$i]=="rouge";
+//    si l'élément est rouge alors je l'ajoute au compteur
+    if($tabCouleur[$i]=="rouge"){
+        $compteRouge++;
+    }
 }
 echo "<br/>Il y a " . $compteRouge . " élément(s) rouge dans le tableau.<br/>";
 // JE SAIS PAS SI C'EST BON !
@@ -59,9 +63,9 @@ echo "<br/>Il y a " . $compteRouge . " élément(s) rouge dans le tableau.<br/>"
 
 // On déclare un tableau qui ne comptient pas de valeur.
 // On indique que la 1ère valeur du tableau(donc à l'indice 0) est égale à 1.
-// On initialise la boucle à 0.
-// Dans la 1ère boucle on parcourt le tableau (1-1=0 => on démarre la boucle à 0) en ajoutant 1 à i pour aller à l'index suivant du tableau. Une fois arrivé au 5ème tour de boucle on sort.
-// Donc on retire 1 à i (ce qui donne 0) et on ajoute 2 à l'indice du tableau (qui est 1).
+// On démarre la boucle à l'index 0.
+// Dans la 1ère boucle on parcourt le tableau (on démarre la boucle à 1) en ajoutant 1 à i pour aller à l'index suivant du tableau. Une fois arrivé au 5ème tour de boucle on sort.
+// Donc on retire 1 à i (ce qui donne 0) et on ajoute 2 à la valeur du tableau (qui est 1).
 // Ce qui donne :
 // 1er tour : On démarre à 1
 // 2è tour : 1 + 2 = 3
