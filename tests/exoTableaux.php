@@ -20,6 +20,13 @@ for ($i=0; $i<count($tabCouleur); $i++){
     if($tabCouleur[$i]=="rouge"){
         $compteRouge++;
     }
+        //$compteRouge+=$tabCouleur[$i]=="rouge"; // équivaut à
+//        if($tabCouleur[$i]=="rouge") {
+//            $compteRouge += 1;
+//        }
+//        else {
+//            $compteRouge += 0;
+//        }
 }
 echo "<br/>Il y a " . $compteRouge . " élément(s) rouge dans le tableau.<br/>";
 // JE SAIS PAS SI C'EST BON !
@@ -37,8 +44,9 @@ echo "<br/>Il y a " . $compteRouge . " élément(s) rouge dans le tableau.<br/>"
 //}
 
 // On déclare un tableau qui ne comptient pas de valeur.
-// Avec le 1ère boucle on ajoute 1 à chaque passage jusqu'à arriver à 5. Et on multiplie le résultat par le résultat.
-// 0x1 = 0 (la boucle continue...)
+// Avec le 1ère boucle on ajoute 1 à chaque passage jusqu'à arriver à 5. Et on multiplie le résultat par le résultat. // à reformuler
+// dire quoi est égale à quoi
+// 0x1 = 0 (la boucle continue...) // faux
 // 1x1 = 1
 // 2x2 = 4
 // 3x3 = 9
@@ -51,24 +59,33 @@ echo "<br/>Il y a " . $compteRouge . " élément(s) rouge dans le tableau.<br/>"
 
 //Exercice 3 :
 //Que fait ce programme ?
-//$tab = array() ;
-//$tab[0] = 1 ;
-//$i = 0 ;
-//for($i = 1 ; $i < 6 ; $i++) {
-//    $tab[$i] = $tab[ $i-1] +2;
-//}
-//for($i = 0 ; $i < 5 ; $i++) {
-//    echo $tab[$i] ;
-//}
+$tab = array() ;
+$tab[0] = 1 ;
+for($i = 1 ; $i < 6 ; $i++) {
+    $tab[$i] = $tab[ $i-1] +2;
+    // au premier passage, $i =1.  $tab[1] = $tab[1-1] + 2 qui est égale à  $tab[1] = $tab[0] + 2
+    // qui est égale à $tab[1] = 1 + 2 qui est égale à $tab[1] = 3
+
+    // au passage 2 , $i = 2. $tab[2] = $tab[2-1] + 2 qui est égale à $tab[2] = $tab[1] + 2 qui est égale à $tab[2] = 3 + 2
+    //$tab[2] = 5
+
+    // au passage 3, $i = 3. $tab[3] = $tab[3-1] + 2 qui est égale à $tab[3] = $tab[2] + 2 qui est égale à $tab[3] = 5 + 2
+    // $tab[3] = 7
+
+    // à compléter jusqu'à $i = 5
+}
+for($i = 0 ; $i < 5 ; $i++) {
+    echo $tab[$i] ;
+}
 
 // On déclare un tableau qui ne comptient pas de valeur.
 // On indique que la 1ère valeur du tableau(donc à l'indice 0) est égale à 1.
-// On démarre la boucle à l'index 0.
-// Dans la 1ère boucle on parcourt le tableau (on démarre la boucle à 1) en ajoutant 1 à i pour aller à l'index suivant du tableau. Une fois arrivé au 5ème tour de boucle on sort.
-// Donc on retire 1 à i (ce qui donne 0) et on ajoute 2 à la valeur du tableau (qui est 1).
+// On initialise la boucle à 0.
+// Dans la 1ère boucle on parcourt le tableau (1-1=0 => on démarre la boucle à 0 // à reformuler) en ajoutant 1 à i pour aller à l'index suivant du tableau. Une fois arrivé au 5ème tour de boucle on sort.
+// Donc on retire 1 à i (ce qui donne 0) et on ajoute 2 à l'indice du tableau (qui est 1). // à reformuler
 // Ce qui donne :
-// 1er tour : On démarre à 1
-// 2è tour : 1 + 2 = 3
+// 1er tour : On démarre à 1 : la valeur de $tab[0] = 1
+// 2è tour : 1 + 2 = 3 :
 // 3è tour : 3+2 = 5
 // 4è tour : 5+2 = 7
 // 5è tour : 7+2 = 9
@@ -90,11 +107,12 @@ $somme = 0;
 $nbNotes = 1;
 
 //Puis, il faut donc parcourir le tableau et additionner chaque valeur du tableau dans une variable $somme.
-//De plus, il faut additionner à chaque valeur 1 à $nbNotes.
+//De plus, il faut additionner  1 à $nbNotes à chaque lecture de valeur du tableau.
 
 for($i=0; $i<count($tabNotes);$i++){
     $somme=$somme+$tabNotes[$i];
-    $nbNotes=count($tabNotes);
+    // soit il faut additionner  1 à $nbNotes à chaque lecture de valeur du tableau.
+    $nbNotes++;
 }
 //Une fois le tableau parcouru, il faut diviser $somme par $nbNotes.
 //Si on met 9 directement, on ne permet pas l’ajout de nouvelles notes.
@@ -123,9 +141,15 @@ echo $moyenne . "<br/>";
 //for($i = 0 ; $i < 5 ; $i++) {
 //    echo $tab[$i] ;
 //}
-// On déclare un tableau. On dit qu'il commence à l'index 0.
-// On le parcourt 5 fois en ajoutant 1 à i pour aller à l'index suivant du tableau.
-// A chaque fois on multiplie le résultat par lui-même.
+
+// la boucle ne fait que tourner ou s'arrête
+// la boucle tourne tant que $i est inférieur à 5
+// la boucle s'arrête quand $i = 5
+
+// On déclare un tableau. On dit que l'index est 0.
+// On  parcourt le tableau tant que l'index est à inférieur à 5 donc 5 fois.
+// on ajoute 1 à i pour aller à l'index suivant du tableau.
+// A chaque fois on multiplie le résultat par lui-même. // à reformuler le résultat de quoi ? on met quoi dans quoi ?
 // Dans la 2è boucle on affiche le résultat du parcourt de boucle :
 // 1er tour : 0x0 = 0
 // 2è tour : 1x1 = 1
@@ -140,12 +164,16 @@ for($i = 0 ; $i < 5 ; $i++) {
     $tab[$i] = $i * $i;
     echo $tab[$i];
 }
+// BRAVO !!!!
 
 
 //Exercice 6 (algorithme)
 $tab1=array(4, 8, 7, 9, 1, 5, 4, 6);
 $tab2=array(7, 6, 5, 2, 1, 3, 7, 4);
-
+$tabResultat = array();
+for($i = 0; $i < count($tab1) ;$i++) {
+    $tabResultat[$i] = $tab1[$i] + $tab2[$i];
+}
 // J'AVAIS ESSAYE PLUSIEURS TRUCS MAIS CA N'AVAIT PAS MARCHE /
 
 //$result=$tab1[$i]+$tab2[$i];
